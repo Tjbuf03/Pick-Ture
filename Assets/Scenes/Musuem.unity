@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa55edf65bcbc9458e87cd795514d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  jump: 40
+  speed: 6
+  jump: 35
   rb: {fileID: 68610999}
   onGround: 0
 --- !u!50 &68610999

@@ -1,0 +1,118 @@
+using System.Collections;
+using UnityEngine;
+using System.Collections.Generic;  // Needed to use List
+
+public class CannonController : MonoBehaviour
+{
+    public GameObject projectilePrefab;   // Prefab for the projectile
+    public GameObject platformPrefab;     // Prefab for the platform
+    public Transform firePoint;           // Where the projectile spawns
+    public float rotationSpeed = 50f;     // Speed at which the cannon rotates automatically
+    public float projectileForce = 20f;   // Force applied to the projectile
+    public int maxPlatforms = 5;          // Maximum number of platforms allowed
+
+    private bool projectileInAir = false; // Flag to check if the projectile is in the air
+    private GameObject currentProjectile; // Reference to the current projectile
+    private List<GameObject> platforms = new List<GameObject>(); // List to keep track of platforms
+
+    void Update()
+    {
+        // Automatically rotate the cannon
+        RotateCannonAutomatically();
+
+        // Shoot projectile when the up arrow is pressed, only if less than max platforms exist
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !projectileInAir && platforms.Count < maxPlatforms)
+        {
+            Shoot();
+        }
+
+        // Turn the projectile into a platform when the down arrow is pressed
+        if (Input.GetKeyDown(KeyCode.DownArrow) && projectileInAir)
+        {
+            ConvertProjectileToPlatform();
+        }
+
+        // Remove the last platform when R is pressed
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RemoveLastPlatform();
+        }
+    }
+
+    // Method to rotate the cannon automatically (without player input)
+    void RotateCannonAutomatically()
+    {
+        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+    }
+
+    // Method to shoot a projectile
+    void Shoot()
+    {
+        // Create the projectile at the fire point
+        currentProjectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+
+        // Apply force to the projectile
+        Rigidbody2D rb = currentProjectile.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
+
+        // Set projectile in air flag to true
+        projectileInAir = true;
+    }
+
+    // Convert the current projectile into a platform
+    void ConvertProjectileToPlatform()
+    {
+        if (currentProjectile != null)
+        {
+            // Get the position of the current projectile
+            Vector3 projectilePosition = currentProjectile.transform.position;
+
+            // Destroy the current projectile
+            Destroy(currentProjectile);
+
+            // Instantiate the platform prefab at the position where the projectile was
+            GameObject platform = Instantiate(platformPrefab, projectilePosition, Quaternion.identity);
+
+            // Ensure the platform stays flat by setting Z-axis to 0
+            platform.transform.position = new Vector3(platform.transform.position.x, platform.transform.position.y, 0);
+
+            // Add the platform to the list of platforms
+            platforms.Add(platform);
+
+            // Reset projectileInAir flag
+            projectileInAir = false;
+
+            // If the number of platforms exceeds the max allowed, prevent shooting
+            if (platforms.Count >= maxPlatforms)
+            {
+                Debug.Log("Maximum platforms reached! Can't shoot more projectiles.");
+            }
+        }
+    }
+
+    // Remove the last platform placed
+    void RemoveLastPlatform()
+    {
+        if (platforms.Count > 0)
+        {
+            // Get the last platform in the list
+            GameObject lastPlatform = platforms[platforms.Count - 1];
+
+            // Destroy the last platform
+            Destroy(lastPlatform);
+
+            // Remove the last platform from the list
+            platforms.RemoveAt(platforms.Count - 1);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
