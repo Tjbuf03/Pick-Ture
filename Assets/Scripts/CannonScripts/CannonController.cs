@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
-using System.Collections.Generic;  // Needed to use List
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class CannonController : MonoBehaviour
 {
@@ -15,15 +16,49 @@ public class CannonController : MonoBehaviour
     private GameObject currentProjectile; // Reference to the current projectile
     private List<GameObject> platforms = new List<GameObject>(); // List to keep track of platforms
 
+    // Reference to the UI Text that will display the platform count
+    public Text platformCounterText;
+
+    // Reference to the UI Text for the popup message
+    public Text maxPlatformPopup;
+
+    // How long the popup message should be shown
+    public float popupDuration = 2f;
+    private float popupTimer = 0f;
+
+    void Start()
+    {
+        // Initialize the UI text with the initial platform count
+        UpdatePlatformCounterUI();
+        HideMaxPlatformPopup();
+    }
+
     void Update()
     {
         // Automatically rotate the cannon
         RotateCannonAutomatically();
 
-        // Shoot projectile when the up arrow is pressed, only if less than max platforms exist
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !projectileInAir && platforms.Count < maxPlatforms)
+        // Check if the max platform popup timer is active and hide it after the duration
+        if (popupTimer > 0f)
         {
-            Shoot();
+            popupTimer -= Time.deltaTime;
+            if (popupTimer <= 0f)
+            {
+                HideMaxPlatformPopup();
+            }
+        }
+
+        // Shoot projectile when the up arrow is pressed, only if less than max platforms exist
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !projectileInAir)
+        {
+            if (platforms.Count < maxPlatforms)
+            {
+                Shoot();
+            }
+            else
+            {
+                ShowMaxPlatformPopup();
+            }
         }
 
         // Turn the projectile into a platform when the down arrow is pressed
@@ -82,11 +117,8 @@ public class CannonController : MonoBehaviour
             // Reset projectileInAir flag
             projectileInAir = false;
 
-            // If the number of platforms exceeds the max allowed, prevent shooting
-            if (platforms.Count >= maxPlatforms)
-            {
-                Debug.Log("Maximum platforms reached! Can't shoot more projectiles.");
-            }
+            // Update the platform counter in the UI
+            UpdatePlatformCounterUI();
         }
     }
 
@@ -103,9 +135,39 @@ public class CannonController : MonoBehaviour
 
             // Remove the last platform from the list
             platforms.RemoveAt(platforms.Count - 1);
+
+            // Update the platform counter in the UI
+            UpdatePlatformCounterUI();
         }
     }
+
+    // Show the popup message that the maximum number of platforms is reached
+    void ShowMaxPlatformPopup()
+    {
+        if (maxPlatformPopup != null)
+        {
+            maxPlatformPopup.enabled = true;  // Show the popup
+            popupTimer = popupDuration;       // Start the timer to hide it after some time
+        }
+    }
+
+    // Hide the popup message
+    void HideMaxPlatformPopup()
+    {
+        if (maxPlatformPopup != null)
+        {
+            maxPlatformPopup.enabled = false; // Hide the popup
+        }
+    }
+
+    // Update the platform counter in the UI
+    void UpdatePlatformCounterUI()
+    {
+        platformCounterText.text = platforms.Count + "/" + maxPlatforms;
+    }
 }
+
+
 
 
 
