@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 68610998}
   - component: {fileID: 68611000}
   - component: {fileID: 68610999}
+  - component: {fileID: 68611001}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,6 +299,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &68611001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68610995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d49b12d2032fca49adf764038eb5e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +475,7 @@ Transform:
   m_GameObject: {fileID: 1115956116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.7249, y: 0.63, z: 0}
+  m_LocalPosition: {x: -3.05, y: 0.63, z: 0}
   m_LocalScale: {x: 8.602929, y: 2.0298817, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -477,9 +490,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1115956116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82085d26ea787804e851b2b6acd6886d, type: 3}
+  m_Script: {fileID: 11500000, guid: 17fa5c7739d146d499e9dbcc4f065da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToLoad: CannonInfo
 --- !u!1 &1349617837
 GameObject:
   m_ObjectHideFlags: 0

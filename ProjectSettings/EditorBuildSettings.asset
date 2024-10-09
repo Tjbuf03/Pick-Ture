@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CannonPainting.unity
     guid: b0b68c823d6ab8a418ec959537a1aee7
+  - enabled: 1
+    path: Assets/Scenes/CannonInfo.unity
+    guid: 4da1da50daf2b354ca0894baee0096c3
   m_configObjects: {}
