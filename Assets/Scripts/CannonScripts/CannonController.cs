@@ -1,20 +1,16 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class CannonController : MonoBehaviour
 {
     public GameObject projectilePrefab;   // Prefab for the projectile
-    public GameObject platformPrefab;     // Prefab for the platform
     public Transform firePoint;           // Where the projectile spawns
     public float rotationSpeed = 50f;     // Speed at which the cannon rotates automatically
     public float projectileForce = 20f;   // Force applied to the projectile
-    public int maxPlatforms = 5;          // Maximum number of platforms allowed
+    public PlatformManager platformManager;  // Reference to the platform manager
 
     private bool projectileInAir = false; // Flag to check if the projectile is in the air
     private GameObject currentProjectile; // Reference to the current projectile
-    private List<GameObject> platforms = new List<GameObject>(); // List to keep track of platforms
 
     // Reference to the UI Text that will display the platform count
     public Text platformCounterText;
@@ -51,7 +47,7 @@ public class CannonController : MonoBehaviour
         // Shoot projectile when the up arrow is pressed, only if less than max platforms exist
         if (Input.GetKeyDown(KeyCode.UpArrow) && !projectileInAir)
         {
-            if (platforms.Count < maxPlatforms)
+            if (platformManager.platforms.Count < platformManager.maxPlatforms)
             {
                 Shoot();
             }
@@ -70,7 +66,8 @@ public class CannonController : MonoBehaviour
         // Remove the last platform when R is pressed
         if (Input.GetKeyDown(KeyCode.R))
         {
-            RemoveLastPlatform();
+            platformManager.RemoveFirstPlatform();  // Use the method from PlatformManager
+            UpdatePlatformCounterUI();
         }
     }
 
@@ -105,36 +102,11 @@ public class CannonController : MonoBehaviour
             // Destroy the current projectile
             Destroy(currentProjectile);
 
-            // Instantiate the platform prefab at the position where the projectile was
-            GameObject platform = Instantiate(platformPrefab, projectilePosition, Quaternion.identity);
-
-            // Ensure the platform stays flat by setting Z-axis to 0
-            platform.transform.position = new Vector3(platform.transform.position.x, platform.transform.position.y, 0);
-
-            // Add the platform to the list of platforms
-            platforms.Add(platform);
+            // Tell the PlatformManager to create a platform
+            platformManager.SpawnPlatform(projectilePosition);
 
             // Reset projectileInAir flag
             projectileInAir = false;
-
-            // Update the platform counter in the UI
-            UpdatePlatformCounterUI();
-        }
-    }
-
-    // Remove the last platform placed
-    void RemoveLastPlatform()
-    {
-        if (platforms.Count > 0)
-        {
-            // Get the last platform in the list
-            GameObject lastPlatform = platforms[platforms.Count - 1];
-
-            // Destroy the last platform
-            Destroy(lastPlatform);
-
-            // Remove the last platform from the list
-            platforms.RemoveAt(platforms.Count - 1);
 
             // Update the platform counter in the UI
             UpdatePlatformCounterUI();
@@ -163,9 +135,10 @@ public class CannonController : MonoBehaviour
     // Update the platform counter in the UI
     void UpdatePlatformCounterUI()
     {
-        platformCounterText.text = platforms.Count + "/" + maxPlatforms;
+        platformCounterText.text = platformManager.platforms.Count + "/" + platformManager.maxPlatforms;
     }
 }
+
 
 
 

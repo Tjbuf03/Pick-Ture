@@ -266,8 +266,8 @@ GameObject:
   - component: {fileID: 253218855}
   - component: {fileID: 253218854}
   - component: {fileID: 253218853}
-  m_Layer: 0
-  m_Name: Square
+  m_Layer: 8
+  m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1426,6 +1426,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7.5
   jumpForce: 7.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheckDistance: 0.6
 --- !u!61 &1665384822
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1594,6 +1598,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf940a28dba50f49bf7ebf4a703574d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformPrefab: {fileID: 8293560992843261994, guid: adf7c2697708da040a1d45ddfa7cf362, type: 3}
+  platformParent: {fileID: 0}
+  maxPlatforms: 5
   platforms: []
 --- !u!4 &1743383135
 Transform:
@@ -1799,11 +1806,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 3632555885086995212, guid: 114795887fc055b478c29832dff2b971, type: 3}
-  platformPrefab: {fileID: 8293560992843261994, guid: adf7c2697708da040a1d45ddfa7cf362, type: 3}
   firePoint: {fileID: 1982277232}
   rotationSpeed: 100
   projectileForce: 7.5
-  maxPlatforms: 5
+  platformManager: {fileID: 1743383134}
   platformCounterText: {fileID: 2005204210}
   maxPlatformPopup: {fileID: 520761344}
   popupDuration: 0.5
