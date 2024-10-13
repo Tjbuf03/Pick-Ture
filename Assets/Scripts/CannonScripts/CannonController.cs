@@ -1,7 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class CannonController : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class CannonController : MonoBehaviour
     public float rotationSpeed = 50f;     // Speed at which the cannon rotates automatically
     public float projectileForce = 20f;   // Force applied to the projectile
     public int maxPlatforms = 5;          // Maximum number of platforms allowed
+    public Color firstPlatformColor = Color.red; // Color for the first platform
+    public Color normalPlatformColor = Color.white; // Default platform color
 
     private bool projectileInAir = false; // Flag to check if the projectile is in the air
     private GameObject currentProjectile; // Reference to the current projectile
@@ -48,29 +50,30 @@ public class CannonController : MonoBehaviour
             }
         }
 
-        // Shoot projectile when the up arrow is pressed, only if less than max platforms exist
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !projectileInAir)
+        // Handle input for the up arrow
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (platforms.Count < maxPlatforms)
+            if (projectileInAir)
             {
-                Shoot();
+                ConvertProjectileToPlatform(); // Convert the projectile to a platform
             }
             else
             {
-                ShowMaxPlatformPopup();
+                if (platforms.Count < maxPlatforms)
+                {
+                    Shoot(); // Shoot a new projectile if under max platform limit
+                }
+                else
+                {
+                    ShowMaxPlatformPopup(); // Show popup if max platforms reached
+                }
             }
         }
 
-        // Turn the projectile into a platform when the down arrow is pressed
-        if (Input.GetKeyDown(KeyCode.DownArrow) && projectileInAir)
-        {
-            ConvertProjectileToPlatform();
-        }
-
-        // Remove the last platform when R is pressed
+        // Remove the first platform when R is pressed
         if (Input.GetKeyDown(KeyCode.R))
         {
-            RemoveLastPlatform();
+            RemoveFirstPlatform();
         }
     }
 
@@ -92,6 +95,9 @@ public class CannonController : MonoBehaviour
 
         // Set projectile in air flag to true
         projectileInAir = true;
+
+        // Add the collision detection for the projectile
+        currentProjectile.AddComponent<ProjectileCollision>().cannonController = this; // Set the reference
     }
 
     // Convert the current projectile into a platform
@@ -117,27 +123,50 @@ public class CannonController : MonoBehaviour
             // Reset projectileInAir flag
             projectileInAir = false;
 
+            // Update platform colors (highlight first platform)
+            UpdatePlatformColors();
+
             // Update the platform counter in the UI
             UpdatePlatformCounterUI();
         }
     }
 
-    // Remove the last platform placed
-    void RemoveLastPlatform()
+    // Remove the first platform placed
+    void RemoveFirstPlatform()
     {
         if (platforms.Count > 0)
         {
-            // Get the last platform in the list
-            GameObject lastPlatform = platforms[platforms.Count - 1];
+            // Get the first platform in the list
+            GameObject firstPlatform = platforms[0];
 
-            // Destroy the last platform
-            Destroy(lastPlatform);
+            // Destroy the first platform
+            Destroy(firstPlatform);
 
-            // Remove the last platform from the list
-            platforms.RemoveAt(platforms.Count - 1);
+            // Remove the first platform from the list
+            platforms.RemoveAt(0);
+
+            // Update platform colors (highlight new first platform)
+            UpdatePlatformColors();
 
             // Update the platform counter in the UI
             UpdatePlatformCounterUI();
+        }
+    }
+
+    // Update the color of the platforms (first platform is red)
+    void UpdatePlatformColors()
+    {
+        for (int i = 0; i < platforms.Count; i++)
+        {
+            SpriteRenderer sr = platforms[i].GetComponent<SpriteRenderer>();
+            if (i == 0)
+            {
+                sr.color = firstPlatformColor; // First platform is red
+            }
+            else
+            {
+                sr.color = normalPlatformColor; // Other platforms are default color
+            }
         }
     }
 
@@ -165,7 +194,36 @@ public class CannonController : MonoBehaviour
     {
         platformCounterText.text = platforms.Count + "/" + maxPlatforms;
     }
+
+    // Method to handle projectile collision with walls
+    public void OnProjectileCollision(GameObject projectile)
+    {
+        if (projectile != null)
+        {
+            Destroy(projectile); // Destroy the projectile on collision
+            projectileInAir = false; // Reset the projectile in air flag
+        }
+    }
 }
+
+// Create a new class for projectile collision
+public class ProjectileCollision : MonoBehaviour
+{
+    public CannonController cannonController; // Reference to the CannonController
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        // Check if the projectile collides with an object tagged as "Wall"
+        if (collider.CompareTag("Wall"))
+        {
+            cannonController.OnProjectileCollision(gameObject); // Call the method in CannonController
+        }
+    }
+}
+
+
+
+
 
 
 
