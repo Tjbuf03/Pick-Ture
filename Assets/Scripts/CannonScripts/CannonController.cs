@@ -50,8 +50,8 @@ public class CannonController : MonoBehaviour
             }
         }
 
-        // Handle input for the up arrow
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        // Handle input for the P key
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (projectileInAir)
             {
