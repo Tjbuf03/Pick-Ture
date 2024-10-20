@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]private Rigidbody2D rb;
 
     [SerializeField]private bool onGround;
+
+    [SerializeField]public Animator playerAnimator;
+
+    [SerializeField]private UnityEvent OnLanding;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +32,17 @@ public class PlayerMovement : MonoBehaviour
         float x_value = (Input.GetAxisRaw("Horizontal") * speed);
         transform.position += new Vector3(x_value * Time.deltaTime, 0f, 0f);
 
+        //To change Idle to Run Animations
+        playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
+
         //Jump with groundcheck, if on ground bool is true
         if(Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump * 10));
             onGround = false;
+
+            //Jump Animation set to true
+            playerAnimator.SetBool("IsJumping", true);
         }
     }
 
@@ -55,4 +66,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Jump Animation set to false
+    public void Onlanding()
+    {
+        playerAnimator.SetBool("IsJumping", false);
+    }
 }
