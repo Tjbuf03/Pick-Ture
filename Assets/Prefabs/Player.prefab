@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4796994316601115725}
   - component: {fileID: 2900011990682339941}
   - component: {fileID: 3781857210313920630}
+  - component: {fileID: 3442329187206220288}
   - component: {fileID: 595973643994222833}
   m_Layer: 0
   m_Name: Player
@@ -197,6 +198,10 @@ MonoBehaviour:
   jump: 40
   rb: {fileID: 3781857210313920630}
   onGround: 0
+  playerAnimator: {fileID: 0}
+  OnLanding:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &2900011990682339941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -269,6 +274,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3442329187206220288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613676521144194882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c9fcb166b97bd4c921d3bfd786ee2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieces: 0
+  piecesText: {fileID: 0}
 --- !u!114 &595973643994222833
 MonoBehaviour:
   m_ObjectHideFlags: 0
