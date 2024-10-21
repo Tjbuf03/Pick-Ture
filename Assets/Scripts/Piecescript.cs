@@ -16,10 +16,12 @@ public class Piecescript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        //Coin destroys itself when touched
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

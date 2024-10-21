@@ -9,12 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MuseumTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/CannonPainting.unity
+    path: Assets/Scenes/CannonScenes/CannonPainting.unity
     guid: b0b68c823d6ab8a418ec959537a1aee7
   - enabled: 1
-    path: Assets/Scenes/CannonInfo.unity
+    path: Assets/Scenes/CannonScenes/CannonInfo.unity
     guid: 4da1da50daf2b354ca0894baee0096c3
   - enabled: 1
-    path: Assets/Scenes/WinCannon.unity
+    path: Assets/Scenes/CannonScenes/WinCannon.unity
     guid: 6c82c0a56598b77408227872bf09870a
+  - enabled: 1
+    path: Assets/Scenes/CannonScenes/2CannonPainting2.unity
+    guid: f631d07d2eddfd146ab86fac37ba8482
+  - enabled: 1
+    path: Assets/Scenes/CannonScenes/3CannonPainting3.unity
+    guid: 16bd9dc35ac70234390377c5c86c49c7
+  - enabled: 1
+    path: Assets/Scenes/CannonScenes/FailCannon.unity
+    guid: 0d0e7c4a78b4790458887f9190f0d391
   m_configObjects: {}
