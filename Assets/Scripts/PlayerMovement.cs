@@ -13,14 +13,15 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]private bool onGround;
 
-    [SerializeField]public Animator playerAnimator;
+    [SerializeField]private Animator playerAnimator;
 
-    [SerializeField]private UnityEvent OnLanding;
+    [SerializeField]private SpriteRenderer spr;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spr = GetComponent<SpriteRenderer>();
 
         onGround = true;
     }
@@ -34,6 +35,16 @@ public class PlayerMovement : MonoBehaviour
 
         //To change Idle to Run Animations
         playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
+
+        //Sprites flip when player changes direction
+        if(x_value < 0)
+        {
+            spr.flipX = true;
+        }
+        if(x_value > 0)
+        {
+            spr.flipX = false;
+        }
 
         //Jump with groundcheck, if on ground bool is true
         if(Input.GetKeyDown(KeyCode.Space) && onGround)
@@ -54,21 +65,20 @@ public class PlayerMovement : MonoBehaviour
             if(normal == Vector3.up)
             {
                 onGround = true;
+                //Jump Animation set to false
+                playerAnimator.SetBool("IsJumping", false);
             }
         }
     }
 
+    //If player falls off object tagged Ground
     private void OnCollisionExit2D(Collision2D other){
         //When player collides with ground set bool to true
         if(other.gameObject.CompareTag("Ground"))
         {
             onGround = false;
+            //Jump Animation set to true
+            playerAnimator.SetBool("IsJumping", true);
         }
-    }
-
-    //Jump Animation set to false
-    public void Onlanding()
-    {
-        playerAnimator.SetBool("IsJumping", false);
     }
 }
