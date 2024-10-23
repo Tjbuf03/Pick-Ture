@@ -26,4 +26,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CannonScenes/FailCannon.unity
     guid: 0d0e7c4a78b4790458887f9190f0d391
+  - enabled: 1
+    path: Assets/Scenes/StarryNightScenes/StarryNight.unity
+    guid: 72100e44dd8350c41a12ba2088f99b55
+  - enabled: 1
+    path: Assets/Scenes/StarryNightScenes/FailStarryNight.unity
+    guid: 842a462a7b5ffe84096acf615030277d
+  - enabled: 1
+    path: Assets/Scenes/StarryNightScenes/InfoStarryNight.unity
+    guid: e0709ed49c84ab7448f7ff1d36f90544
+  - enabled: 1
+    path: Assets/Scenes/StarryNightScenes/WinStarryNight.unity
+    guid: af3d6cb35684fed4ba2ed58d9472211d
   m_configObjects: {}
