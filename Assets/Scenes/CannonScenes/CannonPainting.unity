@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c23621b19ef1b4ebc05553c8a352a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 500
+  timeLimit: 300
   timerText: {fileID: 251335814}
   scenesThatNeedTimer:
   - CannonPainting

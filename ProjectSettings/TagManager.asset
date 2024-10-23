@@ -8,6 +8,7 @@ TagManager:
   - Zone
   - Wall
   - TimerText
+  - StarryNightObstacle
   layers:
   - Default
   - TransparentFX
