@@ -6,7 +6,7 @@ using System.Collections;  // Required for using Coroutines
 public class StarryNightController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float horizontalSpeed = 2f;
+    public float horizontalSpeed = 2f;  // This will now be synced with the camera speed
 
     public int maxHealth = 3;
     private int currentHealth;
@@ -20,6 +20,7 @@ public class StarryNightController : MonoBehaviour
     public float flashInterval = 0.1f;  // Time interval between player flashes (visual feedback)
 
     private SpriteRenderer spriteRenderer;  // To control player sprite visibility for flashing effect
+    private CameraFollow cameraFollow;  // Reference to the CameraFollow script
 
     void Start()
     {
@@ -28,14 +29,21 @@ public class StarryNightController : MonoBehaviour
         healthBar.value = currentHealth;
 
         spriteRenderer = GetComponent<SpriteRenderer>();  // Get the player's sprite renderer
+
+        // Get reference to the CameraFollow script
+        cameraFollow = Camera.main.GetComponent<CameraFollow>();
     }
 
     void Update()
     {
         CalculateCameraBounds();
 
+        // Update the player's horizontal speed to match the camera's scroll speed
+        horizontalSpeed = cameraFollow.GetScrollSpeed();
+
         Vector3 movement = Vector3.zero;
 
+        // Vertical movement
         if (Input.GetKey(KeyCode.W))
         {
             movement += Vector3.up;
@@ -45,6 +53,7 @@ public class StarryNightController : MonoBehaviour
             movement += Vector3.down;
         }
 
+        // Horizontal movement (A and D keys)
         if (Input.GetKey(KeyCode.A))
         {
             movement += Vector3.left;
@@ -54,9 +63,11 @@ public class StarryNightController : MonoBehaviour
             movement += Vector3.right;
         }
 
+        // Apply movement to player, multiplying horizontal movement by the synced speed
         transform.Translate(movement * moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.right * horizontalSpeed * Time.deltaTime);
 
+        // Clamp player within camera bounds
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
@@ -79,6 +90,10 @@ public class StarryNightController : MonoBehaviour
         if (collision.gameObject.CompareTag("StarryNightObstacle") && !isInvincible)
         {
             TakeDamage();
+        }
+        if (collision.gameObject.CompareTag("WinSquare"))
+        {
+            SceneManager.LoadScene("WinStarryNight");  // Load the win scene
         }
     }
 
