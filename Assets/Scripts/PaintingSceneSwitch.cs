@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // Import UI namespace
+using UnityEngine.UI;
 
 public class PaintingSceneSwitch : MonoBehaviour
 {
     private string sceneToLoad; // Scene to load
     private bool isInZone = false; // Flag to check if player is in the zone
-    public GameObject uiPrompt; // Reference to the UI prompt (Text)
+    private GameObject currentUIPrompt; // Reference to the current zone's UI prompt
 
     // This will detect when the player enters a zone (2D trigger)
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,7 +17,10 @@ public class PaintingSceneSwitch : MonoBehaviour
             isInZone = true;
             // Get the scene name from the Zone's assigned scene
             sceneToLoad = other.gameObject.GetComponent<ZoneInfo>().sceneToLoad;
-            uiPrompt.SetActive(true); // Show the UI prompt
+
+            // Get the zone's specific UI prompt and show it
+            currentUIPrompt = other.gameObject.GetComponent<ZoneInfo>().uiPrompt;
+            currentUIPrompt.SetActive(true); // Show the UI prompt
             Debug.Log("Player entered zone: " + sceneToLoad);
         }
     }
@@ -29,7 +32,10 @@ public class PaintingSceneSwitch : MonoBehaviour
         {
             isInZone = false;
             sceneToLoad = "";
-            uiPrompt.SetActive(false); // Hide the UI prompt
+
+            // Hide the UI prompt for the zone the player just left
+            currentUIPrompt.SetActive(false);
+            currentUIPrompt = null; // Clear the reference to the current UI prompt
             Debug.Log("Player left the zone");
         }
     }
@@ -44,5 +50,3 @@ public class PaintingSceneSwitch : MonoBehaviour
         }
     }
 }
-
-

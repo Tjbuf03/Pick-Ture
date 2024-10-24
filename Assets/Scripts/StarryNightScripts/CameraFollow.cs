@@ -12,6 +12,7 @@ public class CameraFollow : MonoBehaviour
     public Text speedIncreasePopup;  // Reference to the UI Text for the popup
     public float popupDuration = 2f;  // Duration to show the popup
 
+
     void Start()
     {
         timeSinceLastIncrease = 0f;  // Initialize the timer for speed increase
@@ -29,12 +30,17 @@ public class CameraFollow : MonoBehaviour
             scrollSpeed += speedIncreaseAmount;  // Increase the camera speed
             timeSinceLastIncrease = 0f;  // Reset the timer
 
-            // Show the popup to notify the player
             StartCoroutine(ShowSpeedIncreasePopup());
         }
 
         // Move the camera to the right at the current scroll speed
         transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
+    }
+
+    // Method to get the current camera scroll speed
+    public float GetScrollSpeed()
+    {
+        return scrollSpeed;
     }
 
     IEnumerator ShowSpeedIncreasePopup()
@@ -50,3 +56,4 @@ public class CameraFollow : MonoBehaviour
         speedIncreasePopup.gameObject.SetActive(false);
     }
 }
+

@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - TimerText
   - StarryNightObstacle
+  - WinSquare
   layers:
   - Default
   - TransparentFX
