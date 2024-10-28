@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 1069945069}
   - component: {fileID: 1069945068}
   - component: {fileID: 1069945067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MuseumTilemap
   m_TagString: Ground
   m_Icon: {fileID: 0}
