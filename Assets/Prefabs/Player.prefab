@@ -124,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 6009088237591571536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.85, y: 0, z: 0}
+  m_LocalPosition: {x: 7.864, y: -0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -201,6 +201,10 @@ MonoBehaviour:
   onGround: 0
   playerAnimator: {fileID: 1214040313504265388}
   spr: {fileID: 6399823975638198169}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundCheckDistance: 1.2
 --- !u!61 &9212772886230083053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -210,7 +214,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6009088237591571536}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 11e3a1a56ee6c694d9f57dd29d7df580, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -233,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09004784, y: -0.050368816}
+  m_Offset: {x: 0.08042407, y: -0.05236399}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -244,7 +248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5980425, y: 0.9742852}
+  m_Size: {x: 0.6028533, y: 0.97827554}
   m_EdgeRadius: 0
 --- !u!50 &7912266771009362207
 Rigidbody2D:
@@ -285,7 +289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c9fcb166b97bd4c921d3bfd786ee2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pieces: 0
   piecesText: {fileID: 0}
 --- !u!114 &1109469056863206376
 MonoBehaviour:
@@ -299,7 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d49b12d2032fca49adf764038eb5e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPrompt: {fileID: 0}
 --- !u!95 &1214040313504265388
 Animator:
   serializedVersion: 5
