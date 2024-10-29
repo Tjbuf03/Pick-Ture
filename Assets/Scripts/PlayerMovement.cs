@@ -22,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         onGround = true;
+
+        //If Player is returning from a painting, their position will be set to their last spot in the museum
+        if(MainManager.Instance.isReturning == true)
+        {
+            transform.position = MainManager.Instance.PlayerPos;
+        }
     }
 
     // Update is called once per frame

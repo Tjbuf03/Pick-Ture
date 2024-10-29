@@ -9,15 +9,9 @@ public class MainManager : MonoBehaviour
 
     public int PieceNumber;
 
-    void Start()
-    {
-        
-    }
+    public Vector3 PlayerPos;
 
-    void Update()
-    {
-        
-    }
+    public bool isReturning;
 
     //Awake happens one time when the object is created
     private void Awake()
@@ -33,5 +27,8 @@ public class MainManager : MonoBehaviour
         Instance = this;
         //Tells game not to destroy object this is attached to as the scene changes
         DontDestroyOnLoad(gameObject);
+
+        //Bool begins unchecked
+        isReturning = false;
     }
 }

@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 682960612}
   - component: {fileID: 682960611}
   m_Layer: 5
-  m_Name: Return
+  m_Name: Retry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,7 +455,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MuseumTest
+          m_StringArgument: CannonPainting
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &682960612
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1031529843}
   - component: {fileID: 1031529842}
   m_Layer: 5
-  m_Name: Retry
+  m_Name: Return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,14 +581,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1922202453}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadMuseumScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CannonPainting
+          m_StringArgument: MuseumTest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1031529843
@@ -803,7 +803,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: Return to Museum
 --- !u!222 &1557298536
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return to Museum
+  m_Text: Retry
 --- !u!222 &2036484513
 CanvasRenderer:
   m_ObjectHideFlags: 0
