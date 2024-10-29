@@ -45,6 +45,13 @@ public class PaintingSceneSwitch : MonoBehaviour
         // Check if the player is in the zone and presses the 'P' key
         if (isInZone && Input.GetKeyDown(KeyCode.P))
         {
+            //Records Player position
+            MainManager.Instance.PlayerPos = transform.position;
+
+            //Player is not returning from painting
+            MainManager.Instance.isReturning = false;
+
+            //Changes scene
             Debug.Log("P key pressed, loading scene: " + sceneToLoad);
             SceneManager.LoadScene(sceneToLoad);
         }

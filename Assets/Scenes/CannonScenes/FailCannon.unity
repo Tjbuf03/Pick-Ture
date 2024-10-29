@@ -743,7 +743,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1769466465}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadMuseumScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
