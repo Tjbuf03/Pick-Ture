@@ -10,13 +10,14 @@ public class FlashlightPatrol : MonoBehaviour
     [SerializeField]private Transform[] Waypoints;
     [SerializeField]private int targetPoint;
     [SerializeField]private float speed;
-    // Start is called before the first frame update
+
     void Start()
     {
-        targetPoint = 0;
+        //Chooses random waypoint to spawn at and move towards
+        targetPoint = Random.Range(0, Waypoints.Length);
+        transform.position = Waypoints[targetPoint].position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Decides random next point if the flashlight gets to one point
