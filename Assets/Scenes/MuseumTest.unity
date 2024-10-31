@@ -41798,6 +41798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
