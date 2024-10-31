@@ -76,13 +76,19 @@ public class PlayerMovement : MonoBehaviour
             canGlide = true;
         }
 
-        //Glide activates if player holds down spacebar
+        //Glide activates if player holds down spacebar after jumping
         if(canGlide)
         {
-            if(Input.GetKey(KeyCode.Space))
+            if(Input.GetKey(KeyCode.Space) && rb.velocity.y <= -1.5f)
             {
-                rb.AddForce(new Vector2(0f, 0.4f));
+                rb.gravityScale = 0f;
+                //Controls how fast player falls while gliding
+                rb.AddForce(new Vector2(0f, -0.1f));
 
+            }
+            else
+            {
+                rb.gravityScale = 1f;
             }
         }
     }
@@ -99,8 +105,10 @@ public class PlayerMovement : MonoBehaviour
                 onGround = true;
                 // Jump Animation set to false
                 playerAnimator.SetBool("IsJumping", false);
+
                 //Player cannot glide
                 canGlide = false;
+                rb.gravityScale = 1f;
             }
         }
     }
