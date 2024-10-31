@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MuseumTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MuseumHubWorld.unity
+    guid: 4a36a781c3d0e644daef3853d9229208
   - enabled: 1
     path: Assets/Scenes/CannonScenes/CannonPainting.unity
     guid: b0b68c823d6ab8a418ec959537a1aee7
