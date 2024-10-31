@@ -20,7 +20,10 @@ public class PaintingSceneSwitch : MonoBehaviour
 
             // Get the zone's specific UI prompt and show it
             currentUIPrompt = other.gameObject.GetComponent<ZoneInfo>().uiPrompt;
-            currentUIPrompt.SetActive(true); // Show the UI prompt
+            if (currentUIPrompt != null)
+            {
+                currentUIPrompt.SetActive(true); // Show the UI prompt
+            }
             Debug.Log("Player entered zone: " + sceneToLoad);
         }
     }
@@ -33,9 +36,12 @@ public class PaintingSceneSwitch : MonoBehaviour
             isInZone = false;
             sceneToLoad = "";
 
-            // Hide the UI prompt for the zone the player just left
-            currentUIPrompt.SetActive(false);
-            currentUIPrompt = null; // Clear the reference to the current UI prompt
+            // Hide the UI prompt for the zone the player just left, if it exists
+            if (currentUIPrompt != null)
+            {
+                currentUIPrompt.SetActive(false);
+                currentUIPrompt = null; // Clear the reference to the current UI prompt
+            }
             Debug.Log("Player left the zone");
         }
     }
@@ -45,13 +51,13 @@ public class PaintingSceneSwitch : MonoBehaviour
         // Check if the player is in the zone and presses the 'P' key
         if (isInZone && Input.GetKeyDown(KeyCode.P))
         {
-            //Records Player position
+            // Records Player position
             MainManager.Instance.PlayerPos = transform.position;
 
-            //Player is not returning from painting
+            // Player is not returning from painting
             MainManager.Instance.isReturning = false;
 
-            //Changes scene
+            // Changes scene
             Debug.Log("P key pressed, loading scene: " + sceneToLoad);
             SceneManager.LoadScene(sceneToLoad);
         }
