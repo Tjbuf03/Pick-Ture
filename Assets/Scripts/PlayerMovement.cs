@@ -16,12 +16,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer; // Layer for ground detection
     [SerializeField] private float groundCheckDistance = 0.2f; // Distance for the ground check
 
+    [Header("Glide")]
+    //[SerializeField] private bool GlideUnlocked;
+    [SerializeField] private bool canGlide;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         onGround = true;
+        //GlideUnlocked = false;
+        canGlide = false;
 
         //If Player is returning from a painting, their position will be set to their last spot in the museum
         if(MainManager.Instance.isReturning == true)
@@ -63,8 +69,25 @@ public class PlayerMovement : MonoBehaviour
             // Jump Animation set to true
             playerAnimator.SetBool("IsJumping", true);
         }
+
+        //If player lets go of space while in the air 
+        if(Input.GetKeyUp(KeyCode.Space) && !onGround){
+            //Player is able to glide 
+            canGlide = true;
+        }
+
+        //Glide activates if player holds down spacebar
+        if(canGlide)
+        {
+            if(Input.GetKey(KeyCode.Space))
+            {
+                rb.AddForce(new Vector2(0f, 0.4f));
+
+            }
+        }
     }
 
+    //Function for player landing on ground
     private void OnCollisionEnter2D(Collision2D other)
     {
         // When player collides with ground, check if grounded from the bottom
@@ -76,10 +99,13 @@ public class PlayerMovement : MonoBehaviour
                 onGround = true;
                 // Jump Animation set to false
                 playerAnimator.SetBool("IsJumping", false);
+                //Player cannot glide
+                canGlide = false;
             }
         }
     }
 
+    //Function for when player falls off ledge
     private void OnCollisionExit2D(Collision2D other)
     {
         // When player exits ground collision, set onGround to false
@@ -90,4 +116,5 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("IsJumping", true);
         }
     }
+
 }
