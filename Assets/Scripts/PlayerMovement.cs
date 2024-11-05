@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
@@ -13,78 +12,62 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer spr;
 
     [Header("Ground Check Settings")]
-    [SerializeField] private LayerMask groundLayer; // Layer for ground detection
-    [SerializeField] private float groundCheckDistance = 0.2f; // Distance for the ground check
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float groundCheckDistance = 0.2f;
 
     [Header("Glide")]
-    //[SerializeField] private bool GlideUnlocked;
     [SerializeField] private bool canGlide;
 
-    // Start is called before the first frame update
+    [Header("Jump Cooldown")]
+    [SerializeField] private float jumpCooldown = 0.2f;  // Set a cooldown time in seconds
+    private float jumpCooldownTimer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         onGround = true;
-        //GlideUnlocked = false;
         canGlide = false;
-
-        //If Player is returning from a painting, their position will be set to their last spot in the museum
-        if(MainManager.Instance.isReturning == true)
-        {
-            transform.position = MainManager.Instance.PlayerPos;
-        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // 2-directional movement for player
+        // Update the jump cooldown timer
+        if (jumpCooldownTimer > 0)
+            jumpCooldownTimer -= Time.deltaTime;
+
         float x_value = Input.GetAxisRaw("Horizontal") * speed;
         transform.position += new Vector3(x_value * Time.deltaTime, 0f, 0f);
 
-        // To change Idle to Run Animations
         playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
 
-        //Sprites flip when player changes direction
-        if (x_value < 0)
-        {
-            spr.flipX = true;
-        }
-        if (x_value > 0)
-        {
-            spr.flipX = false;
-        }
+        if (x_value < 0) spr.flipX = true;
+        if (x_value > 0) spr.flipX = false;
 
-        // Ground check using raycast
         onGround = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
         Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, Color.red);
 
-        // Jump with ground check
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        // Jump only if grounded and cooldown has passed
+        if (Input.GetKeyDown(KeyCode.Space) && onGround && jumpCooldownTimer <= 0)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump * 10));
             onGround = false;
+            jumpCooldownTimer = jumpCooldown;  // Reset the cooldown timer
 
-            // Jump Animation set to true
             playerAnimator.SetBool("IsJumping", true);
         }
 
-        //If player lets go of space while in the air 
-        if(Input.GetKeyUp(KeyCode.Space) && !onGround){
-            //Player is able to glide 
+        if (Input.GetKeyUp(KeyCode.Space) && !onGround)
+        {
             canGlide = true;
         }
 
-        //Glide activates if player holds down spacebar after jumping
-        if(canGlide)
+        if (canGlide)
         {
-            if(Input.GetKey(KeyCode.Space) && rb.velocity.y <= -1.5f)
+            if (Input.GetKey(KeyCode.Space) && rb.velocity.y <= -1.5f)
             {
                 rb.gravityScale = 0f;
-                //Controls how fast player falls while gliding
                 rb.AddForce(new Vector2(0f, -0.1f));
-
             }
             else
             {
@@ -93,36 +76,27 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //Function for player landing on ground
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // When player collides with ground, check if grounded from the bottom
         if (other.gameObject.CompareTag("Ground"))
         {
             Vector3 normal = other.GetContact(0).normal;
             if (normal == Vector3.up)
             {
                 onGround = true;
-                // Jump Animation set to false
                 playerAnimator.SetBool("IsJumping", false);
-
-                //Player cannot glide
                 canGlide = false;
                 rb.gravityScale = 1f;
             }
         }
     }
 
-    //Function for when player falls off ledge
     private void OnCollisionExit2D(Collision2D other)
     {
-        // When player exits ground collision, set onGround to false
         if (other.gameObject.CompareTag("Ground"))
         {
             onGround = false;
-            // Jump Animation set to true
             playerAnimator.SetBool("IsJumping", true);
         }
     }
-
 }
