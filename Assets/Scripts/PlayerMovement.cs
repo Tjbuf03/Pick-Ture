@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
@@ -14,12 +15,18 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check Settings")]
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckDistance = 0.2f;
+    [SerializeField] private float groundCheckWidth = 0.5f;
+    [SerializeField] private Vector2 groundCheckOffset = Vector2.zero;
+
+    [Header("Wall Check Settings")]
+    [SerializeField] private float wallCheckDistance = 0.1f; // Distance to check for walls
+    private bool isTouchingWall;
 
     [Header("Glide")]
     [SerializeField] private bool canGlide;
 
     [Header("Jump Cooldown")]
-    [SerializeField] private float jumpCooldown = 0.2f;  // Set a cooldown time in seconds
+    [SerializeField] private float jumpCooldown = 0.2f;
     private float jumpCooldownTimer;
 
     void Start()
@@ -37,6 +44,18 @@ public class PlayerMovement : MonoBehaviour
             jumpCooldownTimer -= Time.deltaTime;
 
         float x_value = Input.GetAxisRaw("Horizontal") * speed;
+
+        // Wall Check
+        Vector2 wallCheckDirection = x_value < 0 ? Vector2.left : Vector2.right;
+        isTouchingWall = Physics2D.Raycast(transform.position, wallCheckDirection, wallCheckDistance, groundLayer);
+        Debug.DrawRay(transform.position, wallCheckDirection * wallCheckDistance, Color.blue);
+
+        // Stop horizontal movement if touching a wall
+        if (isTouchingWall)
+        {
+            x_value = 0;
+        }
+
         transform.position += new Vector3(x_value * Time.deltaTime, 0f, 0f);
 
         playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
@@ -44,15 +63,18 @@ public class PlayerMovement : MonoBehaviour
         if (x_value < 0) spr.flipX = true;
         if (x_value > 0) spr.flipX = false;
 
-        onGround = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
-        Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, Color.red);
+        // Ground Check using OverlapBox
+        Vector2 boxCenter = (Vector2)transform.position + groundCheckOffset + Vector2.down * (groundCheckDistance / 2);
+        Vector2 boxSize = new Vector2(groundCheckWidth, groundCheckDistance);
+        onGround = Physics2D.OverlapBox(boxCenter, boxSize, 0f, groundLayer);
+        Debug.DrawLine(boxCenter - Vector2.right * groundCheckWidth / 2, boxCenter + Vector2.right * groundCheckWidth / 2, Color.red);
 
         // Jump only if grounded and cooldown has passed
         if (Input.GetKeyDown(KeyCode.Space) && onGround && jumpCooldownTimer <= 0)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump * 10));
             onGround = false;
-            jumpCooldownTimer = jumpCooldown;  // Reset the cooldown timer
+            jumpCooldownTimer = jumpCooldown;
 
             playerAnimator.SetBool("IsJumping", true);
         }
@@ -98,5 +120,14 @@ public class PlayerMovement : MonoBehaviour
             onGround = false;
             playerAnimator.SetBool("IsJumping", true);
         }
+    }
+
+    // Draw the box in the scene view for visual debugging
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Vector2 boxCenter = (Vector2)transform.position + groundCheckOffset + Vector2.down * (groundCheckDistance / 2);
+        Vector2 boxSize = new Vector2(groundCheckWidth, groundCheckDistance);
+        Gizmos.DrawWireCube(boxCenter, boxSize);
     }
 }
