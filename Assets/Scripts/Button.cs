@@ -18,5 +18,17 @@ public class Button : MonoBehaviour
         //Set returning bool to true since player is returning from painting
         MainManager.Instance.isReturning = true;
     }
+
+    //Function to be called when player wins Starry Night painting and returns to museum 
+    public void LoadMuseumSceneStarry(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+
+        //Set returning bool to true since player is returning from painting
+        MainManager.Instance.isReturning = true;
+
+        //Glide upgrade unlocks for Starry night finish
+        MainManager.Instance.GlideUnlocked = true;
+    }
 }
 
