@@ -1379,7 +1379,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 8293560992843261994, guid: adf7c2697708da040a1d45ddfa7cf362, type: 3}
   firePoint: {fileID: 1867399363}
   rotationSpeed: 100
-  projectileForce: 7.5
+  projectileForce: 8.5
   maxPlatforms: 5
   firstPlatformColor: {r: 1, g: 0, b: 0, a: 1}
   normalPlatformColor: {r: 1, g: 1, b: 1, a: 1}
