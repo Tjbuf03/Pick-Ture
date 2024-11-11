@@ -8,6 +8,13 @@ public class PaintingSceneSwitch : MonoBehaviour
     private bool isInZone = false; // Flag to check if player is in the zone
     private GameObject currentUIPrompt; // Reference to the current zone's UI prompt
 
+    private void Start()
+    {
+        if(MainManager.Instance.isReturning == true)
+        // Sets Player position
+           transform.position = MainManager.Instance.PlayerPos;
+    }
+
     // This will detect when the player enters a zone (2D trigger)
     private void OnTriggerEnter2D(Collider2D other)
     {

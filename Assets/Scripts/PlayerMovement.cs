@@ -79,11 +79,13 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("IsJumping", true);
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && !onGround)
+        //Glide mechanic unlocks when bool in Main Manager is set to true
+        if (Input.GetKeyUp(KeyCode.Space) && !onGround && MainManager.Instance.GlideUnlocked)
         {
             canGlide = true;
         }
 
+        //When player presses space, lets go, then presses space again in air, the player gravity switches off replaced by a smaller downward force
         if (canGlide)
         {
             if (Input.GetKey(KeyCode.Space) && rb.velocity.y <= -1.5f)
