@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
             x_value = 0;
         }
 
+        //2 directional movement
         transform.position += new Vector3(x_value * Time.deltaTime, 0f, 0f);
 
         playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
@@ -92,10 +93,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.gravityScale = 0f;
                 rb.AddForce(new Vector2(0f, -0.1f));
+
+                playerAnimator.SetBool("IsGliding", true);
             }
             else
             {
                 rb.gravityScale = 1f;
+
+                playerAnimator.SetBool("IsGliding", false);
             }
         }
     }
@@ -109,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 onGround = true;
                 playerAnimator.SetBool("IsJumping", false);
+                playerAnimator.SetBool("IsGliding", false);
                 canGlide = false;
                 rb.gravityScale = 1f;
             }
