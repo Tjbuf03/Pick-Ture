@@ -20,6 +20,9 @@ public class SceneSwitch : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             LoadScene(backspaceScene);
+
+            //Set returning bool to true since player is returning from painting
+            MainManager.Instance.isReturning = true;
         }
     }
 

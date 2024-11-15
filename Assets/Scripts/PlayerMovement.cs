@@ -92,7 +92,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && rb.velocity.y <= -1.5f)
             {
                 rb.gravityScale = 0f;
-                rb.AddForce(new Vector2(0f, -0.1f));
+                //Adds force to the y axis that you can change to change glide falling rate
+                rb.AddForce(new Vector2(0f, -0.05f));
 
                 playerAnimator.SetBool("IsGliding", true);
             }
