@@ -94,6 +94,9 @@ public class StarryNightController : MonoBehaviour
         if (collision.gameObject.CompareTag("WinSquare"))
         {
             SceneManager.LoadScene("WinStarryNight");  // Load the win scene
+
+            //Glide upgrade unlocks for Starry night finish
+            MainManager.Instance.GlideUnlocked = true;
         }
     }
 

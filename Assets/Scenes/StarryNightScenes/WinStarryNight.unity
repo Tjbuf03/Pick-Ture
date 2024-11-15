@@ -732,8 +732,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 182.03}
-  m_SizeDelta: {x: 348.9812, y: 175.946}
+  m_AnchoredPosition: {x: -0.0000038147, y: 160}
+  m_SizeDelta: {x: 817.5364, y: 224.3018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795536830
 MonoBehaviour:
@@ -770,7 +770,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Nice Job!
 
-    You collected: () Pieces!'
+    You collected: () Pieces!
+
+
+    Glide ability unlocked-
+    Hold SPACE while in air to glide'
 --- !u!222 &1795536831
 CanvasRenderer:
   m_ObjectHideFlags: 0
