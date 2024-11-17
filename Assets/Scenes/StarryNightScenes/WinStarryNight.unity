@@ -773,8 +773,10 @@ MonoBehaviour:
     You collected: () Pieces!
 
 
-    Glide ability unlocked-
-    Hold SPACE while in air to glide'
+    Glide ability unlocked!
+
+    Hold
+    SPACE while in air to glide'
 --- !u!222 &1795536831
 CanvasRenderer:
   m_ObjectHideFlags: 0

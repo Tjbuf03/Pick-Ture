@@ -43,22 +43,22 @@ public class StarryNightController : MonoBehaviour
 
         Vector3 movement = Vector3.zero;
 
-        // Vertical movement
-        if (Input.GetKey(KeyCode.W))
+        // Vertical movement (W/S or Up/Down Arrow keys)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             movement += Vector3.up;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             movement += Vector3.down;
         }
 
-        // Horizontal movement (A and D keys)
-        if (Input.GetKey(KeyCode.A))
+        // Horizontal movement (A/D or Left/Right Arrow keys)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             movement += Vector3.left;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             movement += Vector3.right;
         }
@@ -72,6 +72,7 @@ public class StarryNightController : MonoBehaviour
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
+
 
     void CalculateCameraBounds()
     {
