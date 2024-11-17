@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3618540314020929060}
   - component: {fileID: 8896263581598596711}
   - component: {fileID: 6795044701844039732}
-  - component: {fileID: 4788825250816545694}
+  - component: {fileID: 6518489224033107899}
   m_Layer: 8
   m_Name: Swinging Platform
   m_TagString: Ground
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.8784314, b: 0.6431373, a: 1}
+  m_Color: {r: 0.8886349, g: 1, b: 0.020754695, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,7 +160,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4788825250816545694
+--- !u!114 &6518489224033107899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,9 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c6772a35e9089409157598c3f36bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  swingSpeed: 1.5
-  swingAmount: 1.5
+  player: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+  swingSpeed: 5
+  swingAmount: 5
   returnSpeed: 2
 --- !u!1 &5073930133449931171
 GameObject:
