@@ -1,0 +1,1658 @@
+fileFormatVersion: 2
+guid: 809eda0340a630c48820b8db3fa9e569
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StarryNight_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2345
+        width: 124
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f4934c4de32ee41bd68daa34fe276e
+      internalID: -1300508748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 2057
+        width: 455
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feeb18029eccb1e4a83bf6e03dcef72c
+      internalID: -1618912133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_3
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2341
+        width: 116
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5095ab3ba13951c47a712a11096bcc81
+      internalID: -767515320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_4
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 2250
+        width: 199
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095e2e56f949e2342b857fb9efbfbf43
+      internalID: -870682493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_33
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 2315
+        width: 100
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becae720c5152f449a25bcb2faba408b
+      internalID: -952746231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_34
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 2416
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb680c5070ae9604c8483a496631f0b6
+      internalID: 1473622882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_35
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 2295
+        width: 68
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b4bb8fe674f7247807cc18b403e1c0
+      internalID: 1904776931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_36
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 2212
+        width: 111
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22632b61b2137844b967f687d92f8eca
+      internalID: 1883937555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_37
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 2382
+        width: 74
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fef50da73820d04983206cb05435d24
+      internalID: 693942751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_7
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 1989
+        width: 213
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c10e69006e459c42a7bcadb1d8290f1
+      internalID: -645764021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_5
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 2192
+        width: 195
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa3175083ee2814dab9bd03b100598d
+      internalID: -1527728524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_39
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 1888
+        width: 225
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee438663600a8545b0b0dbd6738649e
+      internalID: 15521326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_38
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 2229
+        width: 97
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad9bedb9d35627459098da8ecb8a132
+      internalID: -1552649093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_40
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 2147
+        width: 98
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f1cac1b01439e439f1359fec2f2ff2
+      internalID: -540709695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_53
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 2237
+        width: 430
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6361b857d42dfe844ac21162df9cef1a
+      internalID: -812523350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_54
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 2125
+        width: 463
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce326c8d255327140acb42a04908e9ce
+      internalID: -1175673750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_6
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1994
+        width: 95
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709a547df96f12c46beb8be77e93ac17
+      internalID: -496102083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_8
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 2055
+        width: 120
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eed0e76aa1f82a428f41922a4415292
+      internalID: 2070458142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_9
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 1993
+        width: 133
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac83f009b97d41459061c2883596a6d
+      internalID: 2026299772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_41
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 2022
+        width: 78
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2f510f5ed108f468611affd4c55202
+      internalID: 740877645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_55
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 1919
+        width: 348
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcb36a51e69ec244bebfe944076d6a7
+      internalID: 503479921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_56
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 1965
+        width: 288
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a2249c3517d764c82284567d25c71f
+      internalID: 1468811573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1716
+        width: 341
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65590ca51df9caa43b8484f3eb938654
+      internalID: 833111566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_11
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1667
+        width: 277
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f05d39bfc6f1c44943b3e4e76836a3
+      internalID: 2064604809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_12
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1861
+        width: 90
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d77249e0dd0f841a4381d0d5715f7a
+      internalID: -408915816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_13
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1745
+        width: 158
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5052ed99409be8a45843d6f927c4efeb
+      internalID: 991851590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_42
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1914
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dc861da2f9f7148afc797048a8c06d
+      internalID: 339710564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_16
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 1609
+        width: 145
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f0972ed268e4e4b9e1899ee13c79e1
+      internalID: 2007203747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_43
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 1703
+        width: 78
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f58e83079eede4e9b896fbdb9e0c3f
+      internalID: 901087808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_44
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1748
+        width: 72
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46c296f5b46ce44391f34f2fc68604b
+      internalID: 988310790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_45
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 1737
+        width: 103
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19842ad05e30c384da96f9e83d357249
+      internalID: 1318879906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_57
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 1612
+        width: 765
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a8a48a45785c64b9623da13b8150a8
+      internalID: -1431903476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_58
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 1659
+        width: 420
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1617827842a16846bdc53b004705eb9
+      internalID: 552107349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_15
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1551
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2782d665ce960f949a7fba74dff9c555
+      internalID: 370151910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1327
+        width: 361
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d46c939ad3234a46b189b05701e7c11
+      internalID: 1759989428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_46
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1572
+        width: 97
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc425c62b22f0e743b8206bf57fea0c0
+      internalID: 1396461962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_47
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1514
+        width: 103
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30dcf42d4ace2c4ca01ef96d194d979
+      internalID: -661091334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_48
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1606
+        width: 77
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3894ca03a53f740b2ca1d4f5f7d37a
+      internalID: -1999367723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_18
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 1400
+        width: 158
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6162705f304b247abd15973f1ffeb9
+      internalID: 798945855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_19
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1424
+        width: 115
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62fcb615de95ad46b14506aa22c91ba
+      internalID: 109183475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_49
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 1437
+        width: 92
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27285447636c67c43b0ff6c8b034292e
+      internalID: -788943368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_50
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1505
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fffd95755bc6f84c83f0ab6615aacbe
+      internalID: -2104929237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_59
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1342
+        width: 498
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc9f87ba155efa4fb4f8d31587a3188
+      internalID: -1905505903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_60
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 1139
+        width: 664
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85eeba75c580c494daad6deb5947e4f2
+      internalID: -286291408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1095
+        width: 159
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7818da75b7b72458775f08da4bb18a
+      internalID: -112160099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_22
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1155
+        width: 87
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d51f4aa8e0ff740a4e28c6cb325699
+      internalID: 1364609776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_23
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1068
+        width: 152
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bcb3ea6cde7994b9ea07d22f118ffc
+      internalID: 1415652230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_20
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 1229
+        width: 117
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24919f7894ad9eb42914433c42cdeba1
+      internalID: 1582636549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_51
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 1231
+        width: 145
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4601547e6b950747be5e8fefd303ef5
+      internalID: -779018483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_52
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1198
+        width: 137
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b519dc12bbfe114084d476e27404a34
+      internalID: 198938270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_61
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1047
+        width: 587
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ad571fbce8a9042a67b21d016aeb0b
+      internalID: 1224692092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_25
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 793
+        width: 280
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a876d2b6ed24d242a3521b0457707d6
+      internalID: -1840868510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_26
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 888
+        width: 123
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e910619c798b5a941918b6bfcb56638d
+      internalID: -1886959264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_24
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 915
+        width: 278
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8858a80db5f6440879b71fd9468426
+      internalID: -1813663682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_62
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 754
+        width: 499
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d751596e8d12a6c4f8e14b762e163d2c
+      internalID: 144830712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_63
+      rect:
+        serializedVersion: 2
+        x: 1993
+        y: 722
+        width: 571
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f07650783f28f34db51451acf47ab5e
+      internalID: -2017578261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_28
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 651
+        width: 104
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b10fb3ec5d11f1499b3d6f3ff4808de
+      internalID: -1075402888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_29
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 685
+        width: 201
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251a674ed08a9ee4391c324f6705f971
+      internalID: 5256382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_27
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 791
+        width: 86
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfd2312e496ccf409b0c73ef3c6c776
+      internalID: 354468689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_68
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 437
+        width: 660
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d1c76921d9cca4abbac391d41e2cf1
+      internalID: 94315191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_30
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 333
+        width: 346
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dacb92a5d1f634fb6fd23e68e8d332
+      internalID: 544798986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_31
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 535
+        width: 174
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cecb7bcc5b997346b72810e42e9fb86
+      internalID: 158308878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_64
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 556
+        width: 398
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7369a739cee44bb4b98fbdaaa33ff08c
+      internalID: -875271974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_66
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 362
+        width: 352
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a948e9a955d7f73419f72015bb5299de
+      internalID: 281148921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_67
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 398
+        width: 475
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43444b92bd515f64fb11406e57f549fd
+      internalID: -1753679191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_32
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 301
+        width: 171
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1586552ca8a1b248ad063a1745dd665
+      internalID: -1595251230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_65
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 290
+        width: 313
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8872849c69b2d4185b1edd32328528
+      internalID: 395758016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight-SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 66
+        width: 192
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bbd860346627e49999d1112e15b04d
+      internalID: 1441288697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StarryNight_69
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 55
+        width: 1195
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e333fad006a5ae418471e19f767f250
+      internalID: 726805694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      StarryNight-SpriteSheet_67: 1441288697
+      StarryNight_0: -1300508748
+      StarryNight_10: 833111566
+      StarryNight_11: 2064604809
+      StarryNight_12: -408915816
+      StarryNight_13: 991851590
+      StarryNight_15: 370151910
+      StarryNight_16: 2007203747
+      StarryNight_17: 1759989428
+      StarryNight_18: 798945855
+      StarryNight_19: 109183475
+      StarryNight_2: -1618912133
+      StarryNight_20: 1582636549
+      StarryNight_21: -112160099
+      StarryNight_22: 1364609776
+      StarryNight_23: 1415652230
+      StarryNight_24: -1813663682
+      StarryNight_25: -1840868510
+      StarryNight_26: -1886959264
+      StarryNight_27: 354468689
+      StarryNight_28: -1075402888
+      StarryNight_29: 5256382
+      StarryNight_3: -767515320
+      StarryNight_30: 544798986
+      StarryNight_31: 158308878
+      StarryNight_32: -1595251230
+      StarryNight_33: -952746231
+      StarryNight_34: 1473622882
+      StarryNight_35: 1904776931
+      StarryNight_36: 1883937555
+      StarryNight_37: 693942751
+      StarryNight_38: -1552649093
+      StarryNight_39: 15521326
+      StarryNight_4: -870682493
+      StarryNight_40: -540709695
+      StarryNight_41: 740877645
+      StarryNight_42: 339710564
+      StarryNight_43: 901087808
+      StarryNight_44: 988310790
+      StarryNight_45: 1318879906
+      StarryNight_46: 1396461962
+      StarryNight_47: -661091334
+      StarryNight_48: -1999367723
+      StarryNight_49: -788943368
+      StarryNight_5: -1527728524
+      StarryNight_50: -2104929237
+      StarryNight_51: -779018483
+      StarryNight_52: 198938270
+      StarryNight_53: -812523350
+      StarryNight_54: -1175673750
+      StarryNight_55: 503479921
+      StarryNight_56: 1468811573
+      StarryNight_57: -1431903476
+      StarryNight_58: 552107349
+      StarryNight_59: -1905505903
+      StarryNight_6: -496102083
+      StarryNight_60: -286291408
+      StarryNight_61: 1224692092
+      StarryNight_62: 144830712
+      StarryNight_63: -2017578261
+      StarryNight_64: -875271974
+      StarryNight_65: 395758016
+      StarryNight_66: 281148921
+      StarryNight_67: -1753679191
+      StarryNight_68: 94315191
+      StarryNight_69: 726805694
+      StarryNight_7: -645764021
+      StarryNight_8: 2070458142
+      StarryNight_9: 2026299772
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -231,9 +231,9 @@ TextureImporter:
       name: Painting_2
       rect:
         serializedVersion: 2
-        x: 162
+        x: 161
         y: 226
-        width: 24
+        width: 25
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
