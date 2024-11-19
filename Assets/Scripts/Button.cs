@@ -30,5 +30,17 @@ public class Button : MonoBehaviour
         //Glide upgrade unlocks for Starry night finish
         MainManager.Instance.GlideUnlocked = true;
     }
+
+    //Function to be called when player wins Cannon painting and returns to museum 
+    public void LoadMuseumSceneCannon(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+
+        //Set returning bool to true since player is returning from painting
+        MainManager.Instance.isReturning = true;
+
+        //Cannon upgrade unlocks for Cannon painting finish
+        MainManager.Instance.CannonUnlocked = true;
+    }
 }
 

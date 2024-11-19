@@ -15,6 +15,7 @@ public class MainManager : MonoBehaviour
 
     [Header("Upgrade Bools")]
     public bool GlideUnlocked;
+    public bool CannonUnlocked;
 
     //Awake happens one time when the object is created
     private void Awake()
@@ -36,5 +37,8 @@ public class MainManager : MonoBehaviour
 
         //Bool begins unchecked
         GlideUnlocked = false;
+
+        //Bool begins unchecked
+        CannonUnlocked = false;
     }
 }
