@@ -3099,6 +3099,7 @@ MonoBehaviour:
   PlayerPos: {x: 8, y: 0, z: 0}
   isReturning: 0
   GlideUnlocked: 0
+  CannonUnlocked: 0
 --- !u!4 &330438700
 Transform:
   m_ObjectHideFlags: 0
@@ -18444,11 +18445,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.25
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.63
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: m_LocalPosition.z
