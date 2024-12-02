@@ -19,14 +19,4 @@ public class PieceCount : MonoBehaviour
         //Text UI displays number of collected pieces
         piecesText.text = "Pieces:" + MainManager.Instance.PieceNumber;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Piecescript ps = collision.gameObject.GetComponent<Piecescript>();
-        if(ps)
-        {
-
-            MainManager.Instance.PieceNumber++;
-        }
-    }
 }

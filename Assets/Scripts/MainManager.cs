@@ -17,6 +17,14 @@ public class MainManager : MonoBehaviour
     public bool GlideUnlocked;
     public bool CannonUnlocked;
 
+    [Header("Piece Bools")]
+    public bool Collected0;
+    public bool Collected1;
+    public bool Collected2;
+    public bool Collected3;
+    public bool Collected4;
+    public bool Collected5;
+
     //Awake happens one time when the object is created
     private void Awake()
     {

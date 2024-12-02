@@ -9,7 +9,8 @@ public class PaintingSceneSwitch : MonoBehaviour
     private GameObject currentUIPrompt; // Reference to the current zone's UI prompt
 
     private void Start()
-    {
+    {   
+        //Player position saves when returning from a painting
         if(MainManager.Instance.isReturning == true)
         // Sets Player position
            transform.position = MainManager.Instance.PlayerPos;
