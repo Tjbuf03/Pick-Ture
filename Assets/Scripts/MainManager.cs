@@ -24,6 +24,12 @@ public class MainManager : MonoBehaviour
     public bool Collected3;
     public bool Collected4;
     public bool Collected5;
+    public bool CollectedS0;
+    public bool CollectedS1;
+    public bool CollectedS2;
+    public bool CollectedC0;
+    public bool CollectedC1;
+    public bool CollectedC2;
 
     //Awake happens one time when the object is created
     private void Awake()
