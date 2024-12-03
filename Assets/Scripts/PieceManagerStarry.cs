@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PieceManager : MonoBehaviour
+public class PieceManagerStarry : MonoBehaviour
 {   
     //Creates list to add all  in this scene to
     public List<GameObject> PieceList = new List<GameObject>();
@@ -16,24 +16,14 @@ public class PieceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(MainManager.Instance.Collected0){
+        if(MainManager.Instance.CollectedS0){
             Destroy(PieceList[0]);
         }
-        if(MainManager.Instance.Collected1){
+        if(MainManager.Instance.CollectedS1){
             Destroy(PieceList[1]);
         }
-        if(MainManager.Instance.Collected2){
+        if(MainManager.Instance.CollectedS2){
             Destroy(PieceList[2]);
         }
-        if(MainManager.Instance.Collected3){
-            Destroy(PieceList[3]);
-        }
-        if(MainManager.Instance.Collected4){
-            Destroy(PieceList[4]);
-        }
-        if(MainManager.Instance.Collected5){
-            Destroy(PieceList[5]);
-        }
-
     }
 }
