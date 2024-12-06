@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 720, y: 476.5128}
+  m_AnchoredPosition: {x: 6.7977, y: 142.59552}
+  m_SizeDelta: {x: 838.9607, y: 503.7038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578466558
 MonoBehaviour:
@@ -195,12 +195,17 @@ MonoBehaviour:
   m_Text: 'Welcome to Pick-Ture!
 
 
-    The Mona-Lisa has been destroyed! Her pieces
+    The Mona Lisa has been destroyed! Her pieces
     are scattered around the musuem and inside some paintings! It''s up to you to
     collect them!
 
 
-    Controls: A & D to move left and right'
+    Controls
+
+    A & D to move left and right
+
+    Press & Hold
+    W to Zoom Out'
 --- !u!222 &578466559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -632,8 +637,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000029087, y: 114.46338}
-  m_SizeDelta: {x: 1184.7878, y: 851.0732}
+  m_AnchoredPosition: {x: 0.000029087, y: 189.73688}
+  m_SizeDelta: {x: 1184.7878, y: 1100.1876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664651917
 MonoBehaviour:
