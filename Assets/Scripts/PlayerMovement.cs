@@ -25,6 +25,15 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide")]
     [SerializeField] private bool canGlide;
 
+    [Header("Cannon")]
+    [SerializeField] private bool canShoot;
+    [SerializeField] private float cannonCooldown;
+    [SerializeField] private GameObject cannonBall;
+    [SerializeField] private GameObject cannonBallPoint;
+    [SerializeField] private GameObject leftcannonBall;
+    [SerializeField] private GameObject leftcannonBallPoint;
+
+
     [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
     private float jumpCooldownTimer;
@@ -35,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         spr = GetComponent<SpriteRenderer>();
         onGround = true;
         canGlide = false;
+        canShoot = false;
     }
 
     void Update()
@@ -104,8 +114,43 @@ public class PlayerMovement : MonoBehaviour
                 playerAnimator.SetBool("IsGliding", false);
             }
         }
+
+        //Cannon mechanic unlocks when bool in MainManager is set to true, and when player is on the ground
+        if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround)
+        {
+            canShoot = true;
+        }
+
+        if(canShoot)
+        {
+            //Cooldown begins, set the length in inspector
+            cannonCooldown -= Time.deltaTime;
+
+            //Shooting projectile when cooldown runs out
+            if(cannonCooldown <= 0f)
+            { 
+              
+                //Shooting facing right
+                if(spr.flipX == false)
+                {
+                    Instantiate(cannonBall, cannonBallPoint.transform.position, cannonBallPoint.transform.rotation);
+                }
+                //Shooting facing left
+                if(spr.flipX)
+                {
+                    Instantiate(leftcannonBall, leftcannonBallPoint.transform.position, leftcannonBallPoint.transform.rotation);
+                }
+
+                //reset cooldown and bool
+                cannonCooldown = 1f;
+                canShoot = false;
+            } 
+        }
+
     }
 
+
+    //When player hits the ground jump and glide settings turn off
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -122,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //When player does not jump but leaves the ground play jump anim
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
