@@ -591,6 +591,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793744508}
   m_CullTransparentMesh: 1
+--- !u!1 &812645706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5860866153751013466, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+  m_PrefabInstance: {fileID: 6534605890069725729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &852998652
 GameObject:
   m_ObjectHideFlags: 0
@@ -40843,6 +40848,26 @@ MonoBehaviour:
   PieceNumber: 0
   PlayerPos: {x: 8, y: 0, z: 0}
   isReturning: 0
+  GlideUnlocked: 0
+  CannonUnlocked: 0
+  Collected0: 0
+  Collected1: 0
+  Collected2: 0
+  Collected3: 0
+  Collected4: 0
+  Collected5: 0
+  CollectedS0: 0
+  CollectedS1: 0
+  CollectedS2: 0
+  CollectedC0: 0
+  CollectedC1: 0
+  CollectedC2: 0
+  CollectedC3: 0
+  CollectedC4: 0
+  CollectedC5: 0
+  CollectedC6: 0
+  CollectedC7: 0
+  CollectedC8: 0
 --- !u!1 &1833057772
 GameObject:
   m_ObjectHideFlags: 0
@@ -41799,9 +41824,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: cannonCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: groundCheckDistance
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: leftcannonBallPoint
+      value: 
+      objectReference: {fileID: 812645706}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
