@@ -34,6 +34,54 @@ public class PieceManager : MonoBehaviour
         if(MainManager.Instance.Collected5){
             Destroy(PieceList[5]);
         }
+        if (MainManager.Instance.Collected6)
+        {
+            Destroy(PieceList[6]);
+        }
+        if (MainManager.Instance.Collected7)
+        {
+            Destroy(PieceList[7]);
+        }
+        if (MainManager.Instance.Collected8)
+        {
+            Destroy(PieceList[8]);
+        }
+        if (MainManager.Instance.Collected9)
+        {
+            Destroy(PieceList[9]);
+        }
+        if (MainManager.Instance.Collected10)
+        {
+            Destroy(PieceList[10]);
+        }
+        if (MainManager.Instance.Collected11)
+        {
+            Destroy(PieceList[11]);
+        }
+        if (MainManager.Instance.Collected12)
+        {
+            Destroy(PieceList[12]);
+        }
+        if (MainManager.Instance.Collected13)
+        {
+            Destroy(PieceList[13]);
+        }
+        if (MainManager.Instance.Collected14)
+        {
+            Destroy(PieceList[14]);
+        }
+        if (MainManager.Instance.Collected15)
+        {
+            Destroy(PieceList[15]);
+        }
+        if (MainManager.Instance.Collected16)
+        {
+            Destroy(PieceList[16]);
+        }
+        if (MainManager.Instance.Collected17)
+        {
+            Destroy(PieceList[17]);
+        }
 
     }
 }

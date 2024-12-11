@@ -24,6 +24,18 @@ public class MainManager : MonoBehaviour
     public bool Collected3;
     public bool Collected4;
     public bool Collected5;
+    public bool Collected6;
+    public bool Collected7;
+    public bool Collected8;
+    public bool Collected9;
+    public bool Collected10;
+    public bool Collected11;
+    public bool Collected12;
+    public bool Collected13;
+    public bool Collected14;
+    public bool Collected15;
+    public bool Collected16;
+    public bool Collected17;
     public bool CollectedS0;
     public bool CollectedS1;
     public bool CollectedS2;
