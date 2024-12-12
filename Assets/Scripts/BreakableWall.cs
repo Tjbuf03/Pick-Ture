@@ -24,6 +24,7 @@ public class BreakableWall : MonoBehaviour
         if(cb || cbl)
         {
             Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
