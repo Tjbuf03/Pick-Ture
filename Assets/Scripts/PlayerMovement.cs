@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool onGround;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private bool canMove;
 
     [Header("Ground Check Settings")]
     [SerializeField] private LayerMask groundLayer;
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spr = GetComponent<SpriteRenderer>();
         onGround = true;
+        canMove = true;
         canGlide = false;
         canShoot = false;
     }
@@ -66,29 +68,33 @@ public class PlayerMovement : MonoBehaviour
             x_value = 0;
         }
 
-        //2 directional movement
-        transform.position += new Vector3(x_value * Time.deltaTime, 0f, 0f);
-
-        playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
-
-        if (x_value < 0) spr.flipX = true;
-        if (x_value > 0) spr.flipX = false;
-
-        // Ground Check using OverlapBox
-        Vector2 boxCenter = (Vector2)transform.position + groundCheckOffset + Vector2.down * (groundCheckDistance / 2);
-        Vector2 boxSize = new Vector2(groundCheckWidth, groundCheckDistance);
-        onGround = Physics2D.OverlapBox(boxCenter, boxSize, 0f, groundLayer);
-        Debug.DrawLine(boxCenter - Vector2.right * groundCheckWidth / 2, boxCenter + Vector2.right * groundCheckWidth / 2, Color.red);
-
-        // Jump only if grounded and cooldown has passed
-        if (Input.GetKeyDown(KeyCode.Space) && onGround && jumpCooldownTimer <= 0)
+        if (canMove)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jump * 10));
-            onGround = false;
-            jumpCooldownTimer = jumpCooldown;
+            //2 directional movement inside bool to be called whenever movement is locked
+            transform.position += new Vector3(x_value * Time.deltaTime, 0f, 0f);
 
-            playerAnimator.SetBool("IsJumping", true);
+            playerAnimator.SetFloat("Speed", Mathf.Abs(x_value));
+
+            if (x_value < 0) spr.flipX = true;
+            if (x_value > 0) spr.flipX = false;
+
+            // Ground Check using OverlapBox
+            Vector2 boxCenter = (Vector2)transform.position + groundCheckOffset + Vector2.down * (groundCheckDistance / 2);
+            Vector2 boxSize = new Vector2(groundCheckWidth, groundCheckDistance);
+            onGround = Physics2D.OverlapBox(boxCenter, boxSize, 0f, groundLayer);
+            Debug.DrawLine(boxCenter - Vector2.right * groundCheckWidth / 2, boxCenter + Vector2.right * groundCheckWidth / 2, Color.red);
+
+            // Jump only if grounded and cooldown has passed
+            if (Input.GetKeyDown(KeyCode.Space) && onGround && jumpCooldownTimer <= 0)
+            {
+                rb.AddForce(new Vector2(rb.velocity.x, jump * 10));
+                onGround = false;
+                jumpCooldownTimer = jumpCooldown;
+
+                playerAnimator.SetBool("IsJumping", true);
+            }
         }
+        
 
         //Glide mechanic unlocks when bool in Main Manager is set to true
         if (Input.GetKeyUp(KeyCode.Space) && !onGround && MainManager.Instance.GlideUnlocked)
@@ -126,6 +132,9 @@ public class PlayerMovement : MonoBehaviour
             //Cooldown begins, set the length in inspector
             cannonCooldown -= Time.deltaTime;
 
+            //Stops player movement
+            canMove = false;
+
             //Shooting projectile when cooldown runs out
             if(cannonCooldown <= 0f)
             { 
@@ -141,9 +150,10 @@ public class PlayerMovement : MonoBehaviour
                     Instantiate(leftcannonBall, leftcannonBallPoint.transform.position, leftcannonBallPoint.transform.rotation);
                 }
 
-                //reset cooldown and bool
+                //reset cooldown and bools
                 cannonCooldown = 1f;
                 canShoot = false;
+                canMove = true;
             } 
         }
 
