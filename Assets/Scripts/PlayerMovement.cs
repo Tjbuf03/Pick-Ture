@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject cannonBallPoint;
     [SerializeField] private GameObject leftcannonBall;
     [SerializeField] private GameObject leftcannonBallPoint;
+    [SerializeField] private bool cannonFire;
 
 
     [Header("Jump Cooldown")]
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         canMove = true;
         canGlide = false;
         canShoot = false;
+        cannonFire = false;
     }
 
     void Update()
@@ -125,6 +127,9 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround)
         {
             canShoot = true;
+            playerAnimator.SetBool("IsShooting", true);
+            //Enables cannonballs to spawn
+            cannonFire = true;
         }
 
         if(canShoot)
@@ -135,25 +140,33 @@ public class PlayerMovement : MonoBehaviour
             //Stops player movement
             canMove = false;
 
-            //Shooting projectile when cooldown runs out
+            //Shooting projectile when character pulls out cannon
+            if(cannonCooldown <= 0.4f && cannonFire)
+            {
+                    //Shooting facing right
+                    if(spr.flipX == false)
+                    {
+                        Instantiate(cannonBall, cannonBallPoint.transform.position, cannonBallPoint.transform.rotation);
+                    }
+                    //Shooting facing left
+                    if(spr.flipX)
+                    {
+                        Instantiate(leftcannonBall, leftcannonBallPoint.transform.position, leftcannonBallPoint.transform.rotation);
+                    }
+
+                    //Disables more than one cannonball from spawning
+                    cannonFire = false;
+            }
+
+            //Shooting state ends when cooldown runs out
             if(cannonCooldown <= 0f)
             { 
-              
-                //Shooting facing right
-                if(spr.flipX == false)
-                {
-                    Instantiate(cannonBall, cannonBallPoint.transform.position, cannonBallPoint.transform.rotation);
-                }
-                //Shooting facing left
-                if(spr.flipX)
-                {
-                    Instantiate(leftcannonBall, leftcannonBallPoint.transform.position, leftcannonBallPoint.transform.rotation);
-                }
-
                 //reset cooldown and bools
                 cannonCooldown = 1f;
                 canShoot = false;
                 canMove = true;
+
+                playerAnimator.SetBool("IsShooting", false);
             } 
         }
 

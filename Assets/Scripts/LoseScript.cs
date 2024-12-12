@@ -25,6 +25,9 @@ public class LoseScript : MonoBehaviour
         if(pm)
         {
              SceneManager.LoadScene(SceneName);
+
+             // Player is not returning from painting
+            MainManager.Instance.isReturning = false;
         }
        
     }
