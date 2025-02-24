@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MuseumTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/IntroScene.unity
+    path: Assets/Scenes/UI/IntroScene.unity
     guid: 88435c1a86f176a419687a1816b5965d
   - enabled: 1
     path: Assets/Scenes/MuseumHubWorld.unity
