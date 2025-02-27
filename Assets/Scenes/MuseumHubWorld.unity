@@ -9577,7 +9577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4e42aaad87a334c8c16ee94572c39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: MuseumHubWorld
+  SceneName: LoseScene
 --- !u!114 &814544511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18280,7 +18280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4e42aaad87a334c8c16ee94572c39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: MuseumHubWorld
+  SceneName: LoseScene
 --- !u!114 &1476911308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20578,6 +20578,50 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 29425119}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1654269106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654269108}
+  - component: {fileID: 1654269107}
+  m_Layer: 0
+  m_Name: SceneChangeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1654269107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654269106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551c9d02a50d5644fa14b6d3f2f56b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1654269108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654269106}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.654093, y: 13.595757, z: 4.4465175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1660199715
 PrefabInstance:
@@ -23201,6 +23245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920789669}
   - component: {fileID: 1920789668}
+  - component: {fileID: 1920789670}
   m_Layer: 0
   m_Name: Mona Lisa
   m_TagString: Untagged
@@ -23275,6 +23320,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1920789670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920789667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fc6a3a07e4bc34d8bc277058b6a6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: WinScene
 --- !u!1 &1923719838
 GameObject:
   m_ObjectHideFlags: 0
@@ -26326,7 +26384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4e42aaad87a334c8c16ee94572c39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: MuseumHubWorld
+  SceneName: LoseScene
 --- !u!114 &2120636163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27393,6 +27451,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1804233221}
   - {fileID: 1923719840}
+  - {fileID: 1654269108}
   - {fileID: 1226644065}
   - {fileID: 904617693}
   - {fileID: 285723158}
