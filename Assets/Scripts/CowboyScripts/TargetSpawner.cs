@@ -1,21 +1,82 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetSpawner : MonoBehaviour
 {
-    public GameObject targetPrefab; // Assign your target prefab
-    public Transform[] spawnPoints; // Assign empty GameObjects here
+    public GameObject targetPrefab;
+    public GameObject bombPrefab;
+    public Transform[] spawnPoints;
     public float spawnInterval = 2f;
+    public float bombChance = 0.3f;
+    public float minSpawnInterval = 0.5f;
+    public float spawnAcceleration = 0.05f;
+    public float respawnCooldown = 1f; // Cooldown before new target/bomb spawns in same spot
+
+    private Dictionary<string, bool> occupiedSpots = new Dictionary<string, bool>();
+    private Dictionary<string, bool> cooldownSpots = new Dictionary<string, bool>();
 
     void Start()
     {
-        InvokeRepeating(nameof(SpawnTarget), 1f, spawnInterval);
+        foreach (Transform spawnPoint in spawnPoints)
+        {
+            occupiedSpots[spawnPoint.name] = false;
+            cooldownSpots[spawnPoint.name] = false;
+        }
+
+        // Start spawning targets and bombs at the specified interval
+        InvokeRepeating(nameof(SpawnRandomTarget), 1f, spawnInterval);
     }
 
-    void SpawnTarget()
+    void SpawnRandomTarget()
     {
-        if (spawnPoints.Length == 0) return;
+        List<string> availableSpots = new List<string>();
 
-        int randomIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(targetPrefab, spawnPoints[randomIndex].position, Quaternion.identity);
+        foreach (var entry in occupiedSpots)
+        {
+            if (!entry.Value && !cooldownSpots[entry.Key]) // Check if the spot is not occupied or on cooldown
+            {
+                availableSpots.Add(entry.Key);
+            }
+        }
+
+        // If there are no available spots, return early
+        if (availableSpots.Count == 0) return;
+
+        // Get a random available spawn point
+        string selectedSpotName = availableSpots[Random.Range(0, availableSpots.Count)];
+        Transform spawnPoint = System.Array.Find(spawnPoints, sp => sp.name == selectedSpotName);
+
+        // Decide whether to spawn a target or a bomb
+        GameObject spawnedObject;
+        if (Random.value < bombChance)
+        {
+            spawnedObject = Instantiate(bombPrefab, spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+            spawnedObject = Instantiate(targetPrefab, spawnPoint.position, Quaternion.identity);
+        }
+
+        // Mark the spawn point as occupied
+        occupiedSpots[selectedSpotName] = true;
+        spawnedObject.GetComponent<TargetBase>().SetSpawnPoint(spawnPoint, this);
+    }
+
+    public void FreeSpawnPoint(Transform spawnPoint)
+    {
+        if (occupiedSpots.ContainsKey(spawnPoint.name))
+        {
+            occupiedSpots[spawnPoint.name] = false;
+            cooldownSpots[spawnPoint.name] = true; // Start cooldown for the spawn point
+            StartCoroutine(CooldownTimer(spawnPoint.name));
+        }
+    }
+
+    private IEnumerator CooldownTimer(string spawnPointName)
+    {
+        // Wait for the respawn cooldown before allowing the spawn point to be used again
+        yield return new WaitForSeconds(respawnCooldown);
+        cooldownSpots[spawnPointName] = false; // Make the spawn point available again
     }
 }

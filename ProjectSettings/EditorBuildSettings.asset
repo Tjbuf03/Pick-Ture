@@ -50,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StarryNightScenes/WinStarryNight.unity
     guid: af3d6cb35684fed4ba2ed58d9472211d
+  - enabled: 1
+    path: Assets/Scenes/CowboyScenes/InfoCowboy.unity
+    guid: 2a86f47d976d5b848877403216e2e396
+  - enabled: 1
+    path: Assets/Scenes/CowboyScenes/1Cowboy1.unity
+    guid: 95fa248fb43e2374a919843cefab36ac
+  - enabled: 1
+    path: Assets/Scenes/CowboyScenes/WinCowboy.unity
+    guid: 11454993afc109c4f94a5fdd532848b9
   m_configObjects: {}
