@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MuseumHubWorld.unity
     guid: 4a36a781c3d0e644daef3853d9229208
   - enabled: 1
+    path: Assets/Scenes/UI/LoseScene.unity
+    guid: 1e5ff71b9a226684ba26c5519af911a5
+  - enabled: 1
+    path: Assets/Scenes/UI/WinScene.unity
+    guid: 209581d465d9b704ba7e3ce478053d5d
+  - enabled: 1
     path: Assets/Scenes/CannonScenes/CannonPainting.unity
     guid: b0b68c823d6ab8a418ec959537a1aee7
   - enabled: 1
