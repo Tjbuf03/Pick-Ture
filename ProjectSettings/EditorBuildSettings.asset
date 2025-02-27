@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MuseumTest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/UI/TitleScene.unity
+    guid: 714c1a597c886a74a8938091fd969c6d
+  - enabled: 1
+    path: Assets/Scenes/UI/CreditScene.unity
+    guid: f379af0c3106fd5448f779846d68a826
+  - enabled: 1
     path: Assets/Scenes/UI/IntroScene.unity
     guid: 88435c1a86f176a419687a1816b5965d
   - enabled: 1

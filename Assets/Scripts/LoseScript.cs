@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class LoseScript : MonoBehaviour
 {
-     //creates place to write in name of scene
-    [SerializeField]private string SceneName;
-    // Start is called before the first frame update
+
+    //This script is placed on objects that can cause you to lose 
+
+    //space for scene name of lose scene to be entered
+    [SerializeField] private string SceneName;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -24,7 +26,7 @@ public class LoseScript : MonoBehaviour
         PlayerMovement pm = collision.gameObject.GetComponent<PlayerMovement>();
         if(pm)
         {
-             SceneManager.LoadScene(SceneName);
+             SceneManager.LoadScene(SceneName); 
 
              // Player is not returning from painting
             MainManager.Instance.isReturning = false;
