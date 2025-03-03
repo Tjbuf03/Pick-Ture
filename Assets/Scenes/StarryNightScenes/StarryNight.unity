@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ping Long Star (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 584.9232
@@ -513,7 +517,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -696,6 +700,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.5436032
@@ -963,7 +971,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1060,6 +1068,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.5699575
@@ -1133,6 +1145,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1258,6 +1274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1033531450}
     m_Modifications:
+    - target: {fileID: 1672946592416075884, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4741662302942686500, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 211.43202
@@ -1317,68 +1337,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4741662302942686500, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
   m_PrefabInstance: {fileID: 355928163}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &369305245
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1391428790}
-    m_Modifications:
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 555.8972
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5518074
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.0672035
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_Name
-      value: Dark Red Star (17)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
---- !u!4 &369305246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-  m_PrefabInstance: {fileID: 369305245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &371180400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1390,6 +1348,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1511,6 +1473,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (16)
@@ -1576,6 +1542,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1942,6 +1912,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557599645319036924, guid: e56d72a0a03bee6469fdff9180e45b1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2229,6 +2203,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (17)
@@ -2435,7 +2413,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2504,6 +2482,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7169213
@@ -2724,6 +2706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.3344216
@@ -2794,6 +2780,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.715086
@@ -3060,8 +3050,8 @@ Canvas:
   m_GameObject: {fileID: 660399105}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1230958993}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3108,6 +3098,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -3224,7 +3218,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3395,6 +3389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ping Long Star (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 614.45746
@@ -3453,6 +3451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1033531450}
     m_Modifications:
+    - target: {fileID: 1672946592416075884, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4741662302942686500, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 384.7132
@@ -3629,6 +3631,10 @@ PrefabInstance:
     - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876083038399035041, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_Name
@@ -3813,7 +3819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 165.73, y: -69}
+  m_AnchoredPosition: {x: 165.72998, y: -69}
   m_SizeDelta: {x: 358.4757, y: 219.1779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755159017
@@ -4093,6 +4099,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4876083038399035041, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_Name
       value: Dark Red Star (5)
@@ -4115,6 +4125,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4190423
@@ -4185,6 +4199,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (10)
@@ -4363,7 +4381,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4447,7 +4465,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4531,7 +4549,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4677,7 +4695,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5197,6 +5215,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (13)
@@ -5392,6 +5414,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (5)
@@ -5457,6 +5483,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -5714,6 +5744,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (8)
@@ -5815,6 +5849,10 @@ PrefabInstance:
     - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876083038399035041, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_Name
@@ -5949,7 +5987,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6033,7 +6071,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6187,7 +6225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6430,7 +6468,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6514,7 +6552,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6589,6 +6627,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4876083038399035041, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_Name
       value: Dark Red Star
@@ -6611,6 +6653,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (4)
@@ -6789,68 +6835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
   m_PrefabInstance: {fileID: 1282373307}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1283700848
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1391428790}
-    m_Modifications:
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 237.44159
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -20.008179
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.0672035
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_Name
-      value: Dark Red Star (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
---- !u!4 &1283700849 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-  m_PrefabInstance: {fileID: 1283700848}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1307977927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6924,6 +6908,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7172,9 +7160,7 @@ Transform:
   - {fileID: 843481964}
   - {fileID: 503191423}
   - {fileID: 1282373308}
-  - {fileID: 1422085310}
   - {fileID: 1024610475}
-  - {fileID: 1283700849}
   - {fileID: 1049936907}
   - {fileID: 1839235847}
   - {fileID: 665504092}
@@ -7190,7 +7176,6 @@ Transform:
   - {fileID: 1557275520}
   - {fileID: 1681880971}
   - {fileID: 1617032660}
-  - {fileID: 1688548311}
   - {fileID: 1266574704}
   - {fileID: 1983794322}
   - {fileID: 651444876}
@@ -7238,7 +7223,6 @@ Transform:
   - {fileID: 1821554062}
   - {fileID: 2077485842}
   - {fileID: 1038387886}
-  - {fileID: 369305246}
   - {fileID: 1596526562}
   - {fileID: 185184024}
   - {fileID: 1281155587}
@@ -7398,6 +7382,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.3900013
@@ -7459,68 +7447,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
   m_PrefabInstance: {fileID: 1420596143}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1422085309
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1391428790}
-    m_Modifications:
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 222.3143
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -19.434216
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.0672035
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_Name
-      value: Dark Red Star (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
---- !u!4 &1422085310 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-  m_PrefabInstance: {fileID: 1422085309}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435295952
 GameObject:
@@ -7713,7 +7639,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7748,6 +7674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1336958
@@ -7867,7 +7797,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8425,7 +8355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8460,6 +8390,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (3)
@@ -8690,6 +8624,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557599645319036924, guid: e56d72a0a03bee6469fdff9180e45b1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8708,6 +8646,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 533.32153
@@ -8770,6 +8712,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 3626906277039934652, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 3857518675924864176, guid: eda43b118c6e33b40bfba21306297b7f, type: 3}
       propertyPath: m_Name
       value: Pink Red Star (2)
@@ -8894,6 +8840,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4547973
@@ -8956,68 +8906,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
   m_PrefabInstance: {fileID: 1681880970}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1688548310
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1391428790}
-    m_Modifications:
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 324.0016
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -19.06818
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.0672035
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-      propertyPath: m_Name
-      value: Dark Red Star (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
---- !u!4 &1688548311 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
-  m_PrefabInstance: {fileID: 1688548310}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1690222130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9065,6 +8953,10 @@ PrefabInstance:
     - target: {fileID: 1116735629890295400, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876083038399035041, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_Name
@@ -9225,6 +9117,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9395,7 +9291,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9558,7 +9454,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9672,6 +9568,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.879968
@@ -9978,7 +9878,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10277,6 +10177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ping Long Star (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8859034
@@ -10397,6 +10301,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.5945485
@@ -10744,7 +10652,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10888,6 +10796,10 @@ PrefabInstance:
     - target: {fileID: 6460982253305109750, guid: e56d72a0a03bee6469fdff9180e45b1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557599645319036924, guid: e56d72a0a03bee6469fdff9180e45b1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11035,6 +10947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ping Long Star (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 331.5716
@@ -11142,7 +11058,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11275,6 +11191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.612739
@@ -11390,7 +11310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11536,7 +11456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11636,6 +11556,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11806,7 +11730,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11968,6 +11892,10 @@ PrefabInstance:
     - target: {fileID: 3348175179520490131, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_Name
       value: Ping Long Star (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674126657051992644, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5474878176828116895, guid: df2c10efa3f4b87438de37eb42bfd5c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12275,7 +12203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: f4c3e76f276d54841bc0e16823e4110a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12446,6 +12374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4876083038399035041, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7461171365553112818, guid: 44b742e7fa5709f449d070d6d3672c61, type: 3}
       propertyPath: m_Name
       value: Dark Red Star (4)
@@ -12511,6 +12443,10 @@ PrefabInstance:
     - target: {fileID: 6460982253305109750, guid: e56d72a0a03bee6469fdff9180e45b1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557599645319036924, guid: e56d72a0a03bee6469fdff9180e45b1f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12654,6 +12590,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391428790}
     m_Modifications:
+    - target: {fileID: 1022507009990915410, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5279180299275391590, guid: 827919e0f4bcb5e4baf321bcf297a61d, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.0504262
@@ -12724,6 +12664,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1033531450}
     m_Modifications:
+    - target: {fileID: 1672946592416075884, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4741662302942686500, guid: cc12c1ed4477f57409a6d5260b910f6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2786503
