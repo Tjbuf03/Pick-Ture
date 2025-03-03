@@ -15,7 +15,7 @@ public class Target : TargetBase
         if (Input.GetKeyDown(KeyCode.P))
         {
             GameObject crosshair = GameObject.FindGameObjectWithTag("Crosshair");
-            if (crosshair != null && Vector2.Distance(transform.position, crosshair.transform.position) < 0.5f)
+            if (crosshair != null && Vector2.Distance(transform.position, crosshair.transform.position) < 0.75f)
             {
                 ScoreManager.Instance.AddScore(currentScore);
                 ScoreManager.Instance.UpdateCombo(); // Call to update combo
