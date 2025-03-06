@@ -24,12 +24,25 @@ public class TargetSpawner : MonoBehaviour
             cooldownSpots[spawnPoint.name] = false;
         }
 
-        // Start spawning targets and bombs at the specified interval
-        InvokeRepeating(nameof(SpawnRandomTarget), 1f, spawnInterval);
+        // Start checking when to begin spawning
+        StartCoroutine(WaitForCountdown());
+    }
+
+    private IEnumerator WaitForCountdown()
+    {
+        while (!ScoreManager.Instance.gameStarted) // Wait for countdown to finish
+        {
+            yield return null;
+        }
+
+        // Start spawning targets after countdown
+        InvokeRepeating(nameof(SpawnRandomTarget), 0f, spawnInterval);
     }
 
     void SpawnRandomTarget()
     {
+        if (!ScoreManager.Instance.gameStarted) return; // Ensure no spawning before game starts
+
         List<string> availableSpots = new List<string>();
 
         foreach (var entry in occupiedSpots)
@@ -79,4 +92,11 @@ public class TargetSpawner : MonoBehaviour
         yield return new WaitForSeconds(respawnCooldown);
         cooldownSpots[spawnPointName] = false; // Make the spawn point available again
     }
+
+    public void StartSpawning()
+    {
+        // Start spawning targets and bombs at the specified interval
+        InvokeRepeating(nameof(SpawnRandomTarget), 1f, spawnInterval);
+    }
+
 }
