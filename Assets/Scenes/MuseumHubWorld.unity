@@ -22020,6 +22020,10 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 7.27985
       objectReference: {fileID: 0}
+    - target: {fileID: 1864848529237175315, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: PauseScreen
+      value: 
+      objectReference: {fileID: 6129685978794124747}
     - target: {fileID: 2528097890523669857, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: piecesText
       value: 
@@ -22060,9 +22064,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6009088237591571536, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 2104255713}
     - targetCorrespondingSourceObject: {fileID: 6009088237591571536, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2104255694}
@@ -26049,20 +26050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5785b8ff7b8e26444a28d0408708a520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2104255713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318636658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad703c063f9b02046b35bc487ad8b7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paused: 0
-  PauseScreen: {fileID: 6129685978794124747}
 --- !u!1001 &2106370253
 PrefabInstance:
   m_ObjectHideFlags: 0
