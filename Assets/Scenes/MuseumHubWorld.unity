@@ -12271,6 +12271,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
   m_PrefabInstance: {fileID: 621585973}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1043038112
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1390281323}
+    m_Modifications:
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.649851
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2845904
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 23.9913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4815328834910557881, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4815328834910557881, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4815328834910557881, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4815328834910557881, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551169932195166227, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+      propertyPath: m_Name
+      value: Basement Floor_Platform (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+--- !u!4 &1043038113 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
+  m_PrefabInstance: {fileID: 1043038112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1046020721
 GameObject:
   m_ObjectHideFlags: 0
@@ -14097,7 +14183,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 26.322674
+      value: 26.586159
       objectReference: {fileID: 0}
     - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
       propertyPath: m_LocalScale.y
@@ -14105,7 +14191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71.6554
+      value: 71.5226
       objectReference: {fileID: 0}
     - target: {fileID: 3716098197742376831, guid: b67aa66c8070e3240b556e3ade06c20e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17504,6 +17590,7 @@ Transform:
   - {fileID: 1510755135}
   - {fileID: 1869275801}
   - {fileID: 1398617993}
+  - {fileID: 1043038113}
   - {fileID: 1001472172}
   - {fileID: 208641358}
   - {fileID: 1035434278}
@@ -22279,11 +22366,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -63.47
+      value: -61.72
       objectReference: {fileID: 0}
     - target: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.12
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 557674364280803901, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22347,7 +22434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: wallCheckDistance
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: groundCheckDistance

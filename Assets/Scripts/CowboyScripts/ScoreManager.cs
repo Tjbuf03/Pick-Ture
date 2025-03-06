@@ -1,23 +1,41 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Import SceneManager
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
+
     public Text scoreText;
-    public Text comboMessageText; // Reference for combo message UI
-    public Text comboMultiplierText; // Reference for combo multiplier UI
+    public Text comboMessageText;
+    public Text comboMultiplierText;
+
+    public int winScore = 7500;
+    public GameObject levelCompletePanel;
+    public Text levelCompleteText;
+    public string nextSceneName;
 
     private int score = 0;
+    private bool levelCompleted = false;
 
     private int consecutiveHits = 0;
-    private float comboTime = 6f;  // Combo resets after 6 seconds of no hits
+    private float comboTime = 6f;
     private float comboResetTimer = 0f;
 
     private string[] comboMessages = new string[] { "OK!", "Nice!", "Great!", "Amazing!", "Fantastic!", "Picturesque!" };
     private int currentComboLevel = 0;
     private float comboMultiplier = 1f;
+
+    [Header("Countdown Settings")]
+    public Text countdownText;
+    public GameObject countdownPanel;
+    public bool gameStarted = false;
+
+    [Header("Level Timer")]
+    public Text levelTimerText;
+    public float levelTimeLimit = 60f; // Editable in Inspector
+    private float levelTimer;
 
     void Awake()
     {
@@ -25,11 +43,31 @@ public class ScoreManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        if (levelCompletePanel != null)
+            levelCompletePanel.SetActive(false);
+
+        if (countdownPanel != null)
+            countdownPanel.SetActive(true);
+
+        StartCoroutine(StartCountdown());
     }
 
     void Update()
     {
-        // Handle combo reset after 6 seconds of no targets hit
+        if (levelCompleted && Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Enter key pressed, loading next scene...");
+            LoadNextScene();
+        }
+
+        if (!gameStarted || levelCompleted) return;
+
+        if (score >= winScore)
+        {
+            ShowLevelCompletePopup();
+        }
+
         if (consecutiveHits > 0)
         {
             comboResetTimer += Time.deltaTime;
@@ -39,15 +77,34 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
-        // Check if score reached 7500 to change the scene
-        if (score >= 7500)
+        // Level timer logic
+        if (levelTimer > 0)
         {
-            LoadNextScene(); // Call method to load the next scene
+            levelTimer -= Time.deltaTime;
+            if (levelTimer < 0) levelTimer = 0; // Ensure it does not go negative
+            UpdateLevelTimerText();
         }
+
+        // Check if time ran out and trigger scene switch
+        if (levelTimer == 0 && gameStarted)
+        {
+            gameStarted = false; // Prevent multiple calls
+            GoToLoseScene();
+        }
+    }
+
+
+    private void UpdateLevelTimerText()
+    {
+        int minutes = Mathf.FloorToInt(levelTimer / 60);
+        int seconds = Mathf.FloorToInt(levelTimer % 60);
+        levelTimerText.text = $"{minutes:D2}:{seconds:D2}";
     }
 
     public void AddScore(int points)
     {
+        if (!gameStarted) return;
+
         int finalPoints = Mathf.RoundToInt(points * comboMultiplier);
         score += finalPoints;
         UpdateScoreText();
@@ -55,6 +112,8 @@ public class ScoreManager : MonoBehaviour
 
     public void SubtractScore(int points)
     {
+        if (!gameStarted) return;
+
         score = Mathf.Max(0, score - points);
         UpdateScoreText();
     }
@@ -64,41 +123,35 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    // Method to update combo when a target is hit
     public void UpdateCombo()
     {
-        consecutiveHits++;
-        comboResetTimer = 0f;  // Reset timer
+        if (!gameStarted) return;
 
-        // Increase combo level every 5 consecutive hits
-        if (consecutiveHits % 5 == 0 && currentComboLevel < 6) // Only update if combo level < 6
+        consecutiveHits++;
+        comboResetTimer = 0f;
+
+        if (consecutiveHits % 5 == 0 && currentComboLevel < 6)
         {
             currentComboLevel++;
-            ShowComboMessage(comboMessages[currentComboLevel - 1]); // Show message after the 5th hit
+            ShowComboMessage(comboMessages[currentComboLevel - 1]);
 
-            // Update combo multiplier based on consecutive hits, cap at x4
             comboMultiplier = 1f + (currentComboLevel * 0.5f);
-            if (comboMultiplier > 4f) comboMultiplier = 4f;  // Cap multiplier at x4
+            if (comboMultiplier > 4f) comboMultiplier = 4f;
             UpdateComboMultiplierText();
         }
     }
 
-    // Show the combo message
     private void ShowComboMessage(string message)
     {
         comboMessageText.text = message;
-
-        // Make sure the message is active and visible
         comboMessageText.gameObject.SetActive(true);
     }
 
-    // Update combo multiplier UI text
     private void UpdateComboMultiplierText()
     {
         comboMultiplierText.text = "Combo x" + comboMultiplier.ToString("F1");
     }
 
-    // Reset the combo counter
     public void ResetCombo()
     {
         consecutiveHits = 0;
@@ -106,17 +159,58 @@ public class ScoreManager : MonoBehaviour
         comboMultiplier = 1f;
         comboResetTimer = 0f;
 
-        // Hide the combo message if the combo is reset
         comboMessageText.gameObject.SetActive(false);
-
-        // Reset the combo multiplier text to default
         UpdateComboMultiplierText();
     }
 
-    // Load the next scene
+    private void ShowLevelCompletePopup()
+    {
+        levelCompleted = true;
+
+        if (levelCompletePanel != null)
+        {
+            levelCompletePanel.SetActive(true);
+
+            if (levelCompleteText != null)
+                levelCompleteText.text = "Level Complete!\nPress ENTER to continue";
+        }
+    }
+
     private void LoadNextScene()
     {
-        // This will load the next scene in the build settings by index
-        SceneManager.LoadScene("WinCowboy"); // Replace "NextScene" with the actual name of your scene
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Next scene name is not set in the Inspector!");
+        }
+    }
+
+    private void GoToLoseScene()
+    {
+        SceneManager.LoadScene("LoseCowboy");
+    }
+
+    private IEnumerator StartCountdown()
+    {
+        gameStarted = false;
+
+        if (countdownText != null)
+        {
+            countdownText.text = "3";
+            yield return new WaitForSeconds(1f);
+            countdownText.text = "2";
+            yield return new WaitForSeconds(1f);
+            countdownText.text = "1";
+            yield return new WaitForSeconds(1f);
+            countdownText.text = "GO!";
+            yield return new WaitForSeconds(1f);
+            countdownPanel.SetActive(false);
+        }
+
+        levelTimer = levelTimeLimit;
+        gameStarted = true;
     }
 }

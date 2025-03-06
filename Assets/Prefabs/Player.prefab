@@ -416,7 +416,7 @@ MonoBehaviour:
   groundCheckDistance: 0.55
   groundCheckWidth: 0.4
   groundCheckOffset: {x: 0.08, y: 0}
-  wallCheckDistance: 0.4
+  wallCheckDistance: 0.5
   canGlide: 0
   canShoot: 0
   cannonCooldown: 0
