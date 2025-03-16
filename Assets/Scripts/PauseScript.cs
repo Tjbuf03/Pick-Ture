@@ -7,6 +7,8 @@ public class PauseScript : MonoBehaviour
 
     public bool paused;
     public GameObject PauseScreen;
+
+    [SerializeField] private AudioSource MusicAudioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,13 @@ public class PauseScript : MonoBehaviour
     {
         Time.timeScale = 0;
         PauseScreen.SetActive(true);
+        MusicAudioSource.volume = 0.5f;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
         PauseScreen.SetActive(false);
+        MusicAudioSource.volume = 1f;
     }
 }
