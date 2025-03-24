@@ -344,13 +344,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Nice job! You Got: () Pieces!
+  m_Text: 'Nice job!
 
 
     Cannon upgrade unlocked!
 
-    Press
-    C to shoot cannon to destroy certain walls!'
+    Press C to shoot cannon
+    to destroy certain walls!'
 --- !u!222 &91317821
 CanvasRenderer:
   m_ObjectHideFlags: 0
