@@ -21,8 +21,10 @@ public class WinScript : MonoBehaviour
     {
         //Checks if total number of pieces are collected, update piece number until we decide on a final one
         if(MainManager.Instance.PieceNumber == 16)
-        {
+        {   
             SceneManager.LoadScene(SceneName);
+
+            MainManager.Instance.isRestarting = true;
         }
     }
 }

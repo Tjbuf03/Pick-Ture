@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         canGlide = false;
         canShoot = false;
         cannonFire = false;
+        MainManager.Instance.isRestarting = false;
     }
 
     void Update()
