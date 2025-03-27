@@ -13,6 +13,8 @@ public class MainManager : MonoBehaviour
 
     public bool isReturning;
 
+    public bool isRestarting;
+
     [Header("Upgrade Bools")]
     public bool GlideUnlocked;
     public bool CannonUnlocked;
@@ -66,6 +68,9 @@ public class MainManager : MonoBehaviour
 
         //Bool begins unchecked
         isReturning = false;
+
+        //Bool begins unchecked
+        isRestarting = false;
 
         //Bool begins unchecked
         GlideUnlocked = false;
