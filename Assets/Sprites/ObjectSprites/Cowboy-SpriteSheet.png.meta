@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f1fc31c17d6b9d4eac83933abae34a3
-      internalID: -1572544424
+      spriteID: 041e06785111f8b4d8fce02028eebc50
+      internalID: 1320144686
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0188fba8545a2fb41a2c3f1362ca03e1
-      internalID: 1376468694
+      spriteID: 3b9988e5192341f40be3c5ea84fc3de8
+      internalID: -1862573138
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64275b6135d118749969e4d13666b249
-      internalID: -1517400381
+      spriteID: 709fe2cd284eccc4c8d4f5e964fd1827
+      internalID: -1333917901
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91574bf99ea87df4489f5585817d11f3
-      internalID: -1904294336
+      spriteID: 0ca21d0a987fad540adc76a6dc7814d7
+      internalID: -541863716
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68022475026cc5f40ab34f752f73200b
-      internalID: 279905484
+      spriteID: fb5775fd2f2fab84db7257ebe5c93a63
+      internalID: 764711278
       vertices: []
       indices: 
       edges: []
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84e0f90aa1b6b354695602e11cc92ac1
-      internalID: -1761376211
+      spriteID: 73f0ac97a1a54b548892ec116532f636
+      internalID: 1672783303
       vertices: []
       indices: 
       edges: []
@@ -263,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dfd13974cf04924582296b6d58e79b5
-      internalID: -560316374
+      spriteID: dd24b9de129a8fd409419b534b1cc91c
+      internalID: -1174514756
       vertices: []
       indices: 
       edges: []
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e01ef85a251e7674582bcec1f3c462d8
-      internalID: 864313442
+      spriteID: d1b156eb78106f749bbb36a689ad43d9
+      internalID: 922346827
       vertices: []
       indices: 
       edges: []
@@ -305,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 255db8bb632370c48a28ece5a38b6bed
-      internalID: -1943465266
+      spriteID: 46a188a67a580f848b65f3b06917fa1c
+      internalID: 1157965429
       vertices: []
       indices: 
       edges: []
@@ -326,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df9d48794cce3c14b80ee847cfe9d011
-      internalID: 1931274678
+      spriteID: a13f6d3cd3f647d40b834632400d760a
+      internalID: -1897003021
       vertices: []
       indices: 
       edges: []
@@ -347,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54f29fffd9965d14a9f8ee07a3efd1d5
-      internalID: 1477919684
+      spriteID: 29b4258cd4b298d409efbb896ed08065
+      internalID: 587207049
       vertices: []
       indices: 
       edges: []
@@ -368,8 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40efd2fcaea3e74eb09148b5140ff19
-      internalID: -944826324
+      spriteID: ccb63481ade749c4fa07c6d61a32390d
+      internalID: -2044328500
       vertices: []
       indices: 
       edges: []
@@ -389,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6da07f27ee27f47a3993ecd26c7e05
-      internalID: -1327902279
+      spriteID: 77a9fd6cb56bd6342b3028787839b41f
+      internalID: 1008012861
       vertices: []
       indices: 
       edges: []
@@ -400,9 +400,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1307
-        y: 140
+        y: 40
         width: 965
-        height: 941
+        height: 939
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,8 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75924505e616e1b41b7f830d2ef53489
-      internalID: -1035263790
+      spriteID: 4aec5386185a3f44bab4b9323f1ab771
+      internalID: 415374913
       vertices: []
       indices: 
       edges: []
@@ -421,7 +421,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2425
-        y: 53
+        y: 134
         width: 421
         height: 501
       alignment: 0
@@ -431,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85eafbbcea4582544a41527493bc0833
-      internalID: -997095157
+      spriteID: 41e660210b9d56b4da79949daea708c2
+      internalID: -1630571873
       vertices: []
       indices: 
       edges: []
@@ -448,21 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cowboy-SpriteSheet_0: -1572544424
-      Cowboy-SpriteSheet_1: 1376468694
-      Cowboy-SpriteSheet_10: 1477919684
-      Cowboy-SpriteSheet_11: -944826324
-      Cowboy-SpriteSheet_12: -1327902279
-      Cowboy-SpriteSheet_13: -1035263790
-      Cowboy-SpriteSheet_14: -997095157
-      Cowboy-SpriteSheet_2: -1517400381
-      Cowboy-SpriteSheet_3: -1904294336
-      Cowboy-SpriteSheet_4: 279905484
-      Cowboy-SpriteSheet_5: -1761376211
-      Cowboy-SpriteSheet_6: -560316374
-      Cowboy-SpriteSheet_7: 864313442
-      Cowboy-SpriteSheet_8: -1943465266
-      Cowboy-SpriteSheet_9: 1931274678
+      Cowboy-SpriteSheet_0: 1320144686
+      Cowboy-SpriteSheet_1: -1862573138
+      Cowboy-SpriteSheet_10: 587207049
+      Cowboy-SpriteSheet_11: -2044328500
+      Cowboy-SpriteSheet_12: 1008012861
+      Cowboy-SpriteSheet_13: 415374913
+      Cowboy-SpriteSheet_14: -1630571873
+      Cowboy-SpriteSheet_2: -1333917901
+      Cowboy-SpriteSheet_3: -541863716
+      Cowboy-SpriteSheet_4: 764711278
+      Cowboy-SpriteSheet_5: 1672783303
+      Cowboy-SpriteSheet_6: -1174514756
+      Cowboy-SpriteSheet_7: 922346827
+      Cowboy-SpriteSheet_8: 1157965429
+      Cowboy-SpriteSheet_9: -1897003021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
