@@ -53,8 +53,7 @@ public class TargetSpawner : MonoBehaviour
             }
         }
 
-        // If there are no available spots, return early
-        if (availableSpots.Count == 0) return;
+        if (availableSpots.Count == 0) return; // No available spawn spots
 
         // Get a random available spawn point
         string selectedSpotName = availableSpots[Random.Range(0, availableSpots.Count)];
@@ -73,8 +72,14 @@ public class TargetSpawner : MonoBehaviour
 
         // Mark the spawn point as occupied
         occupiedSpots[selectedSpotName] = true;
+
+        // Move to hidden position before rising up
+        spawnedObject.transform.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y - 1.5f, spawnPoint.position.z);
+
+        // Assign spawn info to target
         spawnedObject.GetComponent<TargetBase>().SetSpawnPoint(spawnPoint, this);
     }
+
 
     public void FreeSpawnPoint(Transform spawnPoint)
     {

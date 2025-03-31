@@ -5,6 +5,7 @@ public class MovingBomb : TargetBase
     [Header("Movement Settings")]
     public float speed = 5f; // Adjust speed in Inspector
     public bool moveRight = true; // Set direction in Inspector
+    public float rotationSpeed = 200f; // Adjust rotation speed in Inspector
 
     private Vector3 movementDirection;
     private int penalty = 100; // Same penalty as normal bomb
@@ -21,7 +22,11 @@ public class MovingBomb : TargetBase
     void Update()
     {
         // Move the bomb in the chosen direction
-        transform.Translate(movementDirection * speed * Time.deltaTime);
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        // Rotate the bomb based on movement direction
+        float rotationDirection = moveRight ? -1f : 1f; // Clockwise for right, counterclockwise for left
+        transform.Rotate(0, 0, rotationSpeed * rotationDirection * Time.deltaTime);
 
         // Check if player presses P and the crosshair is near the bomb
         if (Input.GetKeyDown(KeyCode.P))

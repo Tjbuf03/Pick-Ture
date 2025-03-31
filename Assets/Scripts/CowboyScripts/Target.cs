@@ -22,10 +22,5 @@ public class Target : TargetBase
                 DestroySelf(); // Call to destroy the target
             }
         }
-
-        if (timeAlive >= lifetime)
-        {
-            DestroySelf();
-        }
     }
 }
