@@ -128,3 +128,4 @@ MonoBehaviour:
   speed: 2
   moveRight: 0
   rotationSpeed: 150
+  explosionPrefab: {fileID: 1878408495839193786, guid: 00bf500a3d646c84db2c69da383dbb1a, type: 3}

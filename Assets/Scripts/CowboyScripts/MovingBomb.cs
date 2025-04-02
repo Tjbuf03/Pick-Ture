@@ -6,6 +6,7 @@ public class MovingBomb : TargetBase
     public float speed = 5f; // Adjust speed in Inspector
     public bool moveRight = true; // Set direction in Inspector
     public float rotationSpeed = 200f; // Adjust rotation speed in Inspector
+    public GameObject explosionPrefab; // Assign in Inspector
 
     private Vector3 movementDirection;
     private int penalty = 100; // Same penalty as normal bomb
@@ -36,6 +37,7 @@ public class MovingBomb : TargetBase
             {
                 SubtractPoints();
                 ResetCombo(); // Reset combo when bomb is hit
+                Explode(); // Show explosion effect
                 DestroySelf(); // Destroy the bomb
             }
         }
@@ -43,13 +45,20 @@ public class MovingBomb : TargetBase
 
     void SubtractPoints()
     {
-        // Subtract points when bomb is hit
         ScoreManager.Instance.SubtractScore(penalty);
     }
 
     void ResetCombo()
     {
-        // Reset the combo in the ScoreManager
         ScoreManager.Instance.ResetCombo();
+    }
+
+    void Explode()
+    {
+        if (explosionPrefab != null)
+        {
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 0.5f); // Adjust timing to match animation length
+        }
     }
 }

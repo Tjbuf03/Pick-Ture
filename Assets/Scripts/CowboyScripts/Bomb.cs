@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bomb : TargetBase
 {
     private int penalty = 100;
+    public GameObject explosionPrefab; // Assign in Inspector
 
     void Update()
     {
@@ -13,6 +14,7 @@ public class Bomb : TargetBase
             {
                 SubtractPoints();
                 ResetCombo(); // Reset combo when bomb is hit
+                Explode(); // Show explosion effect
                 DestroySelf(); // Destroy the bomb
             }
         }
@@ -20,13 +22,20 @@ public class Bomb : TargetBase
 
     void SubtractPoints()
     {
-        // Subtract points when bomb is hit
         ScoreManager.Instance.SubtractScore(penalty);
     }
 
     void ResetCombo()
     {
-        // Reset the combo in the ScoreManager
         ScoreManager.Instance.ResetCombo();
+    }
+
+    void Explode()
+    {
+        if (explosionPrefab != null)
+        {
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 0.5f); // Adjust timing to match animation length
+        }
     }
 }
