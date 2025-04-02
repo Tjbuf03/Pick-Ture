@@ -66,6 +66,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CowboyScenes/2Cowboy2.unity
     guid: 6580639aa42cfc347b4616116b063555
   - enabled: 1
+    path: Assets/Scenes/CowboyScenes/3Cowboy3.unity
+    guid: f8a476ff23c0cca4bbc3baa7de2911d9
+  - enabled: 1
     path: Assets/Scenes/CowboyScenes/WinCowboy.unity
     guid: 11454993afc109c4f94a5fdd532848b9
   - enabled: 1
