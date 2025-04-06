@@ -12,6 +12,7 @@ TagManager:
   - WinSquare
   - TeleportZone
   - Crosshair
+  - AirDuct
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - AirDuct
   - 
   - Ground
   - 
