@@ -32,6 +32,11 @@ public class ScoreManager : MonoBehaviour
     public GameObject countdownPanel;
     public bool gameStarted = false;
 
+    [Header ("Wintext Settings")]
+    public Text winScoreText;
+    public GameObject winScorePanel;
+
+
     [Header("Level Timer")]
     public Text levelTimerText;
     public float levelTimeLimit = 60f; // Editable in Inspector
@@ -49,6 +54,9 @@ public class ScoreManager : MonoBehaviour
 
         if (countdownPanel != null)
             countdownPanel.SetActive(true);
+
+        if (winScorePanel != null)
+            winScorePanel.SetActive(true);
 
         StartCoroutine(StartCountdown());
     }
@@ -197,8 +205,17 @@ public class ScoreManager : MonoBehaviour
     {
         gameStarted = false;
 
+        if (winScoreText != null)
+        {
+            winScoreText.text = $"You need {winScore} points to advance!";
+        }
+
         if (countdownText != null)
         {
+            countdownText.text = "5";
+            yield return new WaitForSeconds(1f);
+            countdownText.text = "4";
+            yield return new WaitForSeconds(1f);
             countdownText.text = "3";
             yield return new WaitForSeconds(1f);
             countdownText.text = "2";
@@ -207,10 +224,17 @@ public class ScoreManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             countdownText.text = "GO!";
             yield return new WaitForSeconds(1f);
-            countdownPanel.SetActive(false);
         }
+
+        // Hide both countdown and win score panels
+        if (countdownPanel != null)
+            countdownPanel.SetActive(false);
+
+        if (winScorePanel != null)
+            winScorePanel.SetActive(false);
 
         levelTimer = levelTimeLimit;
         gameStarted = true;
     }
+
 }
