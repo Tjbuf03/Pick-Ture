@@ -833,11 +833,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ba38044f1126ea944b9e684acc6d7a56, type: 3}
-    m_FontSize: 55
+    m_FontSize: 63
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 60
+    m_MaxSize: 65
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -846,13 +846,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Nice Job!
 
-    You collected: () Pieces!
-
 
     Glide ability unlocked!
 
-    Hold
-    SPACE while in air to glide'
+    Hold SPACE while in air to
+    glide'
 --- !u!222 &1795536831
 CanvasRenderer:
   m_ObjectHideFlags: 0
