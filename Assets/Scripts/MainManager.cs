@@ -18,6 +18,7 @@ public class MainManager : MonoBehaviour
     [Header("Upgrade Bools")]
     public bool GlideUnlocked;
     public bool CannonUnlocked;
+    public bool TNTUnlocked;
 
     [Header("Piece Bools")]
     public bool Collected0;
@@ -77,5 +78,8 @@ public class MainManager : MonoBehaviour
 
         //Bool begins unchecked
         CannonUnlocked = false;
+
+        //Bool begins unchecked
+        TNTUnlocked = false;
     }
 }
