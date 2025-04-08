@@ -18,6 +18,7 @@ public class RestartScript : MonoBehaviour
             //Bool Armageddon
             MainManager.Instance.GlideUnlocked = false;
             MainManager.Instance.CannonUnlocked = false;
+            MainManager.Instance.TNTUnlocked = false;
             MainManager.Instance.Collected0 = false;
             MainManager.Instance.Collected1 = false;
             MainManager.Instance.Collected2 = false;

@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject leftcannonBallPoint;
     [SerializeField] private bool cannonFire;
 
+    [Header("TNT")]
+    [SerializeField] private bool canIgnite;
 
     [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
@@ -169,6 +171,12 @@ public class PlayerMovement : MonoBehaviour
 
                 playerAnimator.SetBool("IsShooting", false);
             } 
+        }
+
+        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround)
+        {
+            canIgnite = true;
+            //playerAnimator.SetBool("IsShooting", true);
         }
 
     }
