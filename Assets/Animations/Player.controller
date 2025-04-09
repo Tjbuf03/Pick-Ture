@@ -174,22 +174,22 @@ AnimatorStateMachine:
     m_Position: {x: 310, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5855742569356295291}
-    m_Position: {x: 440, y: 50, z: 0}
+    m_Position: {x: 440, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6208538013849563556}
-    m_Position: {x: 210, y: 140, z: 0}
+    m_Position: {x: 170, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4783589251243315018}
-    m_Position: {x: 640, y: 240, z: 0}
+    m_Position: {x: 700, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1921731182760313684}
-    m_Position: {x: 80, y: 40, z: 0}
+    m_Position: {x: 40, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3846233304624023578}
     m_Position: {x: 570, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2198047788727588112}
-    m_Position: {x: 340, y: 280, z: 0}
+    m_Position: {x: 670, y: 270, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -5910570188729725268}
@@ -254,6 +254,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: IsShooting
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: IsIgniting
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
