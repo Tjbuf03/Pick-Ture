@@ -132,6 +132,8 @@ MonoBehaviour:
   leftcannonBall: {fileID: 5654165260336347447, guid: 13956f476ffbed647a5a43f849b9bac9, type: 3}
   leftcannonBallPoint: {fileID: 8924675645236734562}
   cannonFire: 0
+  canIgnite: 0
+  TNTCooldown: 1
   jumpCooldown: 1
 --- !u!61 &3480484182567608060
 BoxCollider2D:

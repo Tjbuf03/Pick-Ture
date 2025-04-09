@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("TNT")]
     [SerializeField] private bool canIgnite;
+    [SerializeField] private float TNTCooldown;
 
     [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
@@ -134,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
             //Enables cannonballs to spawn
             cannonFire = true;
         }
-
+        //If Player is firing cannon
         if(canShoot)
         {
             //Cooldown begins, set the length in inspector
@@ -164,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             //Shooting state ends when cooldown runs out
             if(cannonCooldown <= 0f)
             { 
-                //reset cooldown and bools
+                //reset cooldown to same as set in inspector, reset bools
                 cannonCooldown = 1f;
                 canShoot = false;
                 canMove = true;
@@ -173,10 +174,32 @@ public class PlayerMovement : MonoBehaviour
             } 
         }
 
+        //TNT mechanic unlocks when bool in Main Manager is set to true, and player is on ground
         if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround)
         {
             canIgnite = true;
-            //playerAnimator.SetBool("IsShooting", true);
+            playerAnimator.SetBool("IsIgniting", true);
+        }
+
+        //If Player is igniting TNT
+        if (canIgnite)
+        {
+            //Stops Player movement
+            canMove = false;
+
+            //Cooldown begins, set the length in inspector
+            TNTCooldown -= Time.deltaTime;
+
+            //Igniting state ends when cooldown runs out
+            if(TNTCooldown <= 0f)
+            {
+                //Reset cooldown to same as set in inspector, reset bools
+                TNTCooldown = 1f;
+                canIgnite = false;
+                canMove = true;
+
+                playerAnimator.SetBool("IsIgniting", false);
+            }
         }
 
     }
