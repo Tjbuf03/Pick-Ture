@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Glide")]
     [SerializeField] private bool canGlide;
+    [SerializeField] private Image GlideLoad;
 
     [Header("Cannon")]
     [SerializeField] private bool canShoot;
@@ -34,10 +36,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject leftcannonBall;
     [SerializeField] private GameObject leftcannonBallPoint;
     [SerializeField] private bool cannonFire;
+    [SerializeField] private Image CannonLoad;
 
     [Header("TNT")]
     [SerializeField] private bool canIgnite;
     [SerializeField] private float TNTCooldown;
+    [SerializeField] private Image TNTLoad;
 
     [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
@@ -53,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
         canShoot = false;
         cannonFire = false;
         MainManager.Instance.isRestarting = false;
+        //Cannon UI shows it can be fired by default
+        CannonLoad.fillAmount = 0f;
+        //TNT UI shows it can be fired by default
+        TNTLoad.fillAmount = 0f;
     }
 
     void Update()
@@ -106,6 +114,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && !onGround && MainManager.Instance.GlideUnlocked)
         {
             canGlide = true;
+            //Loading bar empties
+            GlideLoad.fillAmount = 0f;
         }
 
         //When player presses space, lets go, then presses space again in air, the player gravity switches off replaced by a smaller downward force
@@ -128,12 +138,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Cannon mechanic unlocks when bool in MainManager is set to true, and when player is on the ground
-        if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround)
+        if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround && canShoot == false)
         {
             canShoot = true;
             playerAnimator.SetBool("IsShooting", true);
             //Enables cannonballs to spawn
             cannonFire = true;
+            //Cannon Load bar fills
+            CannonLoad.fillAmount = 1f;
         }
         //If Player is firing cannon
         if(canShoot)
@@ -141,11 +153,14 @@ public class PlayerMovement : MonoBehaviour
             //Cooldown begins, set the length in inspector
             cannonCooldown -= Time.deltaTime;
 
+            //Cannon Load bar goes down
+            CannonLoad.fillAmount -= Time.deltaTime;
+
             //Stops player movement
             canMove = false;
 
             //Shooting projectile when character pulls out cannon
-            if(cannonCooldown <= 0.4f && cannonFire)
+            if (cannonCooldown <= 0.4f && cannonFire)
             {
                     //Shooting facing right
                     if(spr.flipX == false)
@@ -175,10 +190,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //TNT mechanic unlocks when bool in Main Manager is set to true, and player is on ground
-        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround)
+        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround && canIgnite == false)
         {
             canIgnite = true;
             playerAnimator.SetBool("IsIgniting", true);
+            //Cannon Load bar fills
+            TNTLoad.fillAmount = 1f;
         }
 
         //If Player is igniting TNT
@@ -190,8 +207,11 @@ public class PlayerMovement : MonoBehaviour
             //Cooldown begins, set the length in inspector
             TNTCooldown -= Time.deltaTime;
 
+            //TNT Load bar goes down
+            TNTLoad.fillAmount -= Time.deltaTime;
+
             //Igniting state ends when cooldown runs out
-            if(TNTCooldown <= 0f)
+            if (TNTCooldown <= 0f)
             {
                 //Reset cooldown to same as set in inspector, reset bools
                 TNTCooldown = 1f;
@@ -217,6 +237,8 @@ public class PlayerMovement : MonoBehaviour
                 playerAnimator.SetBool("IsJumping", false);
                 playerAnimator.SetBool("IsGliding", false);
                 canGlide = false;
+                //Glide loading bar fills
+                GlideLoad.fillAmount = 1f;
                 rb.gravityScale = 1f;
             }
         }
