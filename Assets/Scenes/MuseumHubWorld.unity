@@ -12011,6 +12011,7 @@ MonoBehaviour:
   isRestarting: 0
   GlideUnlocked: 0
   CannonUnlocked: 0
+  TNTUnlocked: 0
   Collected0: 0
   Collected1: 0
   Collected2: 0
@@ -27348,6 +27349,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fca980e3f48df141b3faac71afe9d41, type: 3}
+--- !u!114 &837459261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4425643488578067864, guid: 60f24a2f97a56e44cb9718fd1811745a, type: 3}
+  m_PrefabInstance: {fileID: 6129685978794124746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &840135349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46543,6 +46555,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c34a47088c6794cb07952ea99d7be2, type: 3}
+--- !u!114 &1538254804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3796239305050949000, guid: 60f24a2f97a56e44cb9718fd1811745a, type: 3}
+  m_PrefabInstance: {fileID: 6129685978794124746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1543431453
 GameObject:
   m_ObjectHideFlags: 0
@@ -47224,6 +47247,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 711023327904354450, guid: d4d670e11c3fc0645b7a47ae282dbe02, type: 3}
   m_PrefabInstance: {fileID: 1563036574}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1564607177 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3652986612590093425, guid: 60f24a2f97a56e44cb9718fd1811745a, type: 3}
+  m_PrefabInstance: {fileID: 6129685978794124746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1573652795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53917,6 +53951,18 @@ PrefabInstance:
       propertyPath: speed
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: TNTLoad
+      value: 
+      objectReference: {fileID: 1564607177}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: GlideLoad
+      value: 
+      objectReference: {fileID: 1538254804}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: CannonLoad
+      value: 
+      objectReference: {fileID: 837459261}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: cannonCooldown
       value: 1
