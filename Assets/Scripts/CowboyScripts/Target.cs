@@ -18,9 +18,11 @@ public class Target : TargetBase
             if (crosshair != null && Vector2.Distance(transform.position, crosshair.transform.position) < 0.75f)
             {
                 ScoreManager.Instance.AddScore(currentScore);
-                ScoreManager.Instance.UpdateCombo(); // Call to update combo
-                DestroySelf(); // Call to destroy the target
+                ScoreManager.Instance.UpdateCombo();
+                crosshair.GetComponent<CrosshairController>()?.TryShowShotEffect();
+                DestroySelf();
             }
         }
     }
+
 }

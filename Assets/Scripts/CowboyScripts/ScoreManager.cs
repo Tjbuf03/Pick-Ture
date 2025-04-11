@@ -174,6 +174,7 @@ public class ScoreManager : MonoBehaviour
     private void ShowLevelCompletePopup()
     {
         levelCompleted = true;
+        Time.timeScale = 0f; // Pause the entire game
 
         if (levelCompletePanel != null)
         {
@@ -186,6 +187,8 @@ public class ScoreManager : MonoBehaviour
 
     private void LoadNextScene()
     {
+        Time.timeScale = 1f; // Resume game time before switching scenes
+
         if (!string.IsNullOrEmpty(nextSceneName))
         {
             SceneManager.LoadScene(nextSceneName);
@@ -195,6 +198,7 @@ public class ScoreManager : MonoBehaviour
             Debug.LogError("Next scene name is not set in the Inspector!");
         }
     }
+
 
     private void GoToLoseScene()
     {
