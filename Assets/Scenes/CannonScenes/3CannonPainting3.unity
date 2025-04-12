@@ -652,6 +652,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &673487397 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6587908013648897460, guid: de1dffcede266e94fa657a81f0d3242a, type: 3}
+  m_PrefabInstance: {fileID: 673487392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &673487398 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6520378435171079176, guid: de1dffcede266e94fa657a81f0d3242a, type: 3}
+  m_PrefabInstance: {fileID: 673487392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &673487399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7612733233548396340, guid: de1dffcede266e94fa657a81f0d3242a, type: 3}
+  m_PrefabInstance: {fileID: 673487392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &724024783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1346,18 @@ PrefabInstance:
       propertyPath: piecesText
       value: 
       objectReference: {fileID: 673487394}
+    - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: TNTLoad
+      value: 
+      objectReference: {fileID: 673487397}
+    - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: GlideLoad
+      value: 
+      objectReference: {fileID: 673487399}
+    - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: CannonLoad
+      value: 
+      objectReference: {fileID: 673487398}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
