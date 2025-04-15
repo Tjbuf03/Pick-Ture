@@ -64701,6 +64701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6096913977422417254, guid: 60f24a2f97a56e44cb9718fd1811745a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6876950746560684374, guid: 60f24a2f97a56e44cb9718fd1811745a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
