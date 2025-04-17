@@ -53964,6 +53964,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 837459261}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: TNTCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: cannonCooldown
       value: 1
       objectReference: {fileID: 0}

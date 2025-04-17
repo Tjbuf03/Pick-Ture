@@ -120,7 +120,8 @@ public class PlayerMovement : MonoBehaviour
 
         //When player presses space, lets go, then presses space again in air, the player gravity switches off replaced by a smaller downward force
         if (canGlide)
-        {
+        {   
+            //if player reaches top of their jump and presses space
             if (Input.GetKey(KeyCode.Space) && rb.velocity.y <= -1.5f)
             {
                 rb.gravityScale = 0f;
@@ -208,16 +209,23 @@ public class PlayerMovement : MonoBehaviour
             TNTCooldown -= Time.deltaTime;
 
             //TNT Load bar goes down
-            TNTLoad.fillAmount -= Time.deltaTime;
+            TNTLoad.fillAmount -= 0.5f * Time.deltaTime;
+
+            //TNT Blasts player upward at correct point in animation
+            if(TNTCooldown <= 0.2f)
+            {
+                //Adds external force
+                rb.AddForce(new Vector2(0f, 30f));
+                canMove = true;
+            }
 
             //Igniting state ends when cooldown runs out
             if (TNTCooldown <= 0f)
             {
                 //Reset cooldown to same as set in inspector, reset bools
-                TNTCooldown = 1f;
+                TNTCooldown = 2f;
                 canIgnite = false;
-                canMove = true;
-
+                
                 playerAnimator.SetBool("IsIgniting", false);
             }
         }
