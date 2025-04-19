@@ -53948,8 +53948,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 451273900}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: TNT
+      value: 
+      objectReference: {fileID: 4553109427885388636, guid: 68618c1d17372a341b3086a513e02962, type: 3}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: speed
       value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: recoil
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: TNTLoad
@@ -53963,6 +53971,10 @@ PrefabInstance:
       propertyPath: CannonLoad
       value: 
       objectReference: {fileID: 837459261}
+    - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
+      propertyPath: blastForce
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: TNTCooldown
       value: 2
