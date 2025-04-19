@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Glide")]
     [SerializeField] private bool canGlide;
     [SerializeField] private Image GlideLoad;
+    [SerializeField] private float downwardPull;
 
     [Header("Cannon")]
     [SerializeField] private bool canShoot;
@@ -131,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.gravityScale = 0f;
                 //Adds force to the y axis that you can change to change glide falling rate
-                rb.AddForce(new Vector2(0f, -0.04f));
+                rb.AddForce(new Vector2(0f, -downwardPull));
 
                 playerAnimator.SetBool("IsGliding", true);
             }
@@ -227,6 +228,8 @@ public class PlayerMovement : MonoBehaviour
             TNTCooldown -= Time.deltaTime;
             //TNT Load bar goes down
             TNTLoad.fillAmount -= 0.5f * Time.deltaTime;
+            //Zeroes forces on player so that jump is consistent
+            rb.velocity = Vector3.zero;
 
             //Spawns TNT at correct point in animation
             if (TNTCooldown <= 1.5f && canspawnTNT)
