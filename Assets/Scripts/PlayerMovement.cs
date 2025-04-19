@@ -37,11 +37,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject leftcannonBallPoint;
     [SerializeField] private bool cannonFire;
     [SerializeField] private Image CannonLoad;
+    [SerializeField] private float recoil;
 
     [Header("TNT")]
     [SerializeField] private bool canIgnite;
+    [SerializeField] private bool canspawnTNT;
+    [SerializeField] private GameObject TNT;
     [SerializeField] private float TNTCooldown;
     [SerializeField] private Image TNTLoad;
+    [SerializeField] private float blastForce;
 
     [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
@@ -56,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         canGlide = false;
         canShoot = false;
         cannonFire = false;
+        canspawnTNT = false;
         MainManager.Instance.isRestarting = false;
         //Cannon UI shows it can be fired by default
         CannonLoad.fillAmount = 0f;
@@ -126,20 +131,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.gravityScale = 0f;
                 //Adds force to the y axis that you can change to change glide falling rate
-                rb.AddForce(new Vector2(0f, -0.05f));
+                rb.AddForce(new Vector2(0f, -0.04f));
 
                 playerAnimator.SetBool("IsGliding", true);
             }
             else
             {
                 rb.gravityScale = 1f;
-
                 playerAnimator.SetBool("IsGliding", false);
             }
         }
 
-        //Cannon mechanic unlocks when bool in MainManager is set to true, and when player is on the ground
-        if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround && canShoot == false)
+        //Cannon mechanic unlocks when bool in MainManager is set to true, and when player is on the ground, and when player is not using TNT
+        if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround && canShoot == false && canIgnite == false)
         {
             canShoot = true;
             playerAnimator.SetBool("IsShooting", true);
@@ -163,19 +167,21 @@ public class PlayerMovement : MonoBehaviour
             //Shooting projectile when character pulls out cannon
             if (cannonCooldown <= 0.4f && cannonFire)
             {
-                    //Shooting facing right
-                    if(spr.flipX == false)
-                    {
-                        Instantiate(cannonBall, cannonBallPoint.transform.position, cannonBallPoint.transform.rotation);
-                    }
-                    //Shooting facing left
-                    if(spr.flipX)
-                    {
-                        Instantiate(leftcannonBall, leftcannonBallPoint.transform.position, leftcannonBallPoint.transform.rotation);
-                    }
+                //Shooting facing right
+                if(spr.flipX == false)
+                {
+                    Instantiate(cannonBall, cannonBallPoint.transform.position, cannonBallPoint.transform.rotation);
+                    rb.AddForce(new Vector2(-recoil, 0f), ForceMode2D.Impulse);
+                }
+                //Shooting facing left
+                if(spr.flipX)
+                {
+                    Instantiate(leftcannonBall, leftcannonBallPoint.transform.position, leftcannonBallPoint.transform.rotation);
+                    rb.AddForce(new Vector2(recoil, 0f), ForceMode2D.Impulse);
+                }
 
-                    //Disables more than one cannonball from spawning
-                    cannonFire = false;
+                //Disables more than one cannonball from spawning
+                cannonFire = false;
             }
 
             //Shooting state ends when cooldown runs out
@@ -185,16 +191,29 @@ public class PlayerMovement : MonoBehaviour
                 cannonCooldown = 1f;
                 canShoot = false;
                 canMove = true;
-
                 playerAnimator.SetBool("IsShooting", false);
+
+                //Shooting facing right
+                if (spr.flipX == false)
+                {
+                    //Adds equal force in opposite direction to cancel out
+                    rb.AddForce(new Vector2(recoil, 0f), ForceMode2D.Impulse);
+                }
+                //Shooting facing left
+                if (spr.flipX)
+                {
+                    //Adds equal force in the opposite direction to cancel out
+                    rb.AddForce(new Vector2(-recoil, 0f), ForceMode2D.Impulse);
+                }
             } 
         }
 
-        //TNT mechanic unlocks when bool in Main Manager is set to true, and player is on ground
-        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround && canIgnite == false)
+        //TNT mechanic unlocks when bool in Main Manager is set to true, and player is on ground, and player is not using Cannon
+        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround && canIgnite == false && canShoot == false)
         {
             canIgnite = true;
             playerAnimator.SetBool("IsIgniting", true);
+            canspawnTNT = true;
             //Cannon Load bar fills
             TNTLoad.fillAmount = 1f;
         }
@@ -204,18 +223,39 @@ public class PlayerMovement : MonoBehaviour
         {
             //Stops Player movement
             canMove = false;
-
             //Cooldown begins, set the length in inspector
             TNTCooldown -= Time.deltaTime;
-
             //TNT Load bar goes down
             TNTLoad.fillAmount -= 0.5f * Time.deltaTime;
 
-            //TNT Blasts player upward at correct point in animation
-            if(TNTCooldown <= 0.2f)
+            //Spawns TNT at correct point in animation
+            if (TNTCooldown <= 1.5f && canspawnTNT)
             {
-                //Adds external force
-                rb.AddForce(new Vector2(0f, 30f));
+                //Placement facing right
+                if (spr.flipX == false)
+                {
+                    //Instantiates TNT to the left of player
+                    Instantiate(TNT, new Vector3(transform.position.x - 1f, transform.position.y, 0f), transform.rotation);
+
+                }
+                //Placement facing left
+                if (spr.flipX == true)
+                {
+                    //Instantiates TNT to the right of player
+                    Instantiate(TNT, new Vector3(transform.position.x + 1f, transform.position.y, 0f), transform.rotation);
+
+                }
+
+                //Turns off TNT instantiation
+                canspawnTNT = false;
+            } 
+
+            //TNT Blasts player upward at correct point in animation
+            if (TNTCooldown <= 0.2f)
+            {
+                rb.gravityScale = 0f;
+                //Adds external force, forceMode2D.Impulse greatly amplifies the amount to resemble more of an explosion
+                rb.AddForce(new Vector2(0f, blastForce), ForceMode2D.Impulse);
                 canMove = true;
             }
 
@@ -225,8 +265,16 @@ public class PlayerMovement : MonoBehaviour
                 //Reset cooldown to same as set in inspector, reset bools
                 TNTCooldown = 2f;
                 canIgnite = false;
-                
                 playerAnimator.SetBool("IsIgniting", false);
+                rb.gravityScale = 1f;
+
+                //Gives player ability to glide after TNT jump if they have unlocked it 
+                if (MainManager.Instance.GlideUnlocked)
+                {
+                    canGlide = true;
+                    //Loading bar empties
+                    GlideLoad.fillAmount = 0f;
+                }
             }
         }
 
