@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float TNTCooldown;
     [SerializeField] private Image TNTLoad;
     [SerializeField] private float blastForce;
+    [SerializeField] private bool TNTFailed;
 
     [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
@@ -238,25 +239,34 @@ public class PlayerMovement : MonoBehaviour
                 if (spr.flipX == false)
                 {
                     //Instantiates TNT to the left of player
-                    Instantiate(TNT, new Vector3(transform.position.x - 1f, transform.position.y, 0f), transform.rotation);
+                    Instantiate(TNT, new Vector3(transform.position.x - 1f, transform.position.y + 0.5f, 0f), transform.rotation);
 
                 }
                 //Placement facing left
                 if (spr.flipX == true)
                 {
                     //Instantiates TNT to the right of player
-                    Instantiate(TNT, new Vector3(transform.position.x + 1f, transform.position.y, 0f), transform.rotation);
+                    Instantiate(TNT, new Vector3(transform.position.x + 1f, transform.position.y + 0.5f, 0f), transform.rotation);
 
                 }
 
                 //Turns off TNT instantiation
                 canspawnTNT = false;
+
+                if (TNT.transform.position.y <= (transform.position.y - 1))
+                {
+                    TNTFailed = true;
+                }
+                else
+                {
+                    TNTFailed = false;
+                }
             } 
 
             //TNT Blasts player upward at correct point in animation
-            if (TNTCooldown <= 0.2f)
+            if (TNTCooldown <= 0.2f && !TNTFailed)
             {
-                rb.gravityScale = 0f;
+                rb.gravityScale = 0f;  
                 //Adds external force, forceMode2D.Impulse greatly amplifies the amount to resemble more of an explosion
                 rb.AddForce(new Vector2(0f, blastForce), ForceMode2D.Impulse);
                 canMove = true;
