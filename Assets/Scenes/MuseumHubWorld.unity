@@ -93001,11 +93001,11 @@ PrefabInstance:
       objectReference: {fileID: 4553109427885388636, guid: 68618c1d17372a341b3086a513e02962, type: 3}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: jump
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: speed
-      value: 8
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: recoil
@@ -93029,7 +93029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: TNTCooldown
-      value: 2
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7615178703751358173, guid: e605f7a42b96d6d4abd26aaf71612c48, type: 3}
       propertyPath: downwardPull
