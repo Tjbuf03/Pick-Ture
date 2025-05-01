@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canspawnTNT;
     [SerializeField] private GameObject TNT;
     [SerializeField] private float TNTCooldown;
+    [SerializeField] private float TNTPlaceTime;
     [SerializeField] private Image TNTLoad;
     [SerializeField] private float blastForce;
     [SerializeField] private bool TNTFailed;
@@ -216,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
             canIgnite = true;
             playerAnimator.SetBool("IsIgniting", true);
             canspawnTNT = true;
-            //Cannon Load bar fills
+            //TNT Load bar fills
             TNTLoad.fillAmount = 1f;
         }
 
@@ -228,25 +229,25 @@ public class PlayerMovement : MonoBehaviour
             //Cooldown begins, set the length in inspector
             TNTCooldown -= Time.deltaTime;
             //TNT Load bar goes down
-            TNTLoad.fillAmount -= 0.5f * Time.deltaTime;
+            TNTLoad.fillAmount -= 0.38f * Time.deltaTime;
             //Zeroes forces on player so that jump is consistent
             rb.velocity = Vector3.zero;
 
             //Spawns TNT at correct point in animation
-            if (TNTCooldown <= 1.5f && canspawnTNT)
+            if (TNTCooldown <= TNTPlaceTime && canspawnTNT)
             {
                 //Placement facing right
                 if (spr.flipX == false)
                 {
                     //Instantiates TNT to the left of player
-                    Instantiate(TNT, new Vector3(transform.position.x - 1f, transform.position.y + 0.5f, 0f), transform.rotation);
+                    Instantiate(TNT, new Vector3(transform.position.x - 0.9f, transform.position.y + 0.2f, 0f), transform.rotation);
 
                 }
                 //Placement facing left
                 if (spr.flipX == true)
                 {
                     //Instantiates TNT to the right of player
-                    Instantiate(TNT, new Vector3(transform.position.x + 1f, transform.position.y + 0.5f, 0f), transform.rotation);
+                    Instantiate(TNT, new Vector3(transform.position.x + 0.9f, transform.position.y +0.2f, 0f), transform.rotation);
 
                 }
 
@@ -263,8 +264,16 @@ public class PlayerMovement : MonoBehaviour
                 }
             } 
 
+            //Player exploding animations looks better slightly before explosion
+            if(TNTCooldown <= 0.6f && !TNTFailed)
+            {
+                //Transitions to player exploding animation
+                playerAnimator.SetBool("IsIgniting", false);
+                playerAnimator.SetBool("IsExploding", true);
+            }
+
             //TNT Blasts player upward at correct point in animation
-            if (TNTCooldown <= 0.2f && !TNTFailed)
+            if (TNTCooldown <= 0.4f && !TNTFailed)
             {
                 rb.gravityScale = 0f;  
                 //Adds external force, forceMode2D.Impulse greatly amplifies the amount to resemble more of an explosion
@@ -276,9 +285,9 @@ public class PlayerMovement : MonoBehaviour
             if (TNTCooldown <= 0f)
             {
                 //Reset cooldown to same as set in inspector, reset bools
-                TNTCooldown = 2f;
+                TNTCooldown = 2.8f;
                 canIgnite = false;
-                playerAnimator.SetBool("IsIgniting", false);
+                playerAnimator.SetBool("IsExploding", false);
                 rb.gravityScale = 1f;
 
                 //Gives player ability to glide after TNT jump if they have unlocked it 

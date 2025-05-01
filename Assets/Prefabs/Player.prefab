@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
-  jump: 40
+  jump: 45
   rb: {fileID: 7912266771009362207}
   onGround: 0
   playerAnimator: {fileID: 1214040313504265388}
@@ -564,6 +564,8 @@ MonoBehaviour:
   groundCheckOffset: {x: 0.08, y: 0}
   wallCheckDistance: 0.4
   canGlide: 0
+  GlideLoad: {fileID: 0}
+  downwardPull: 0.04
   canShoot: 0
   cannonCooldown: 1
   cannonBall: {fileID: 8995680623051340296, guid: b2cef782a9d5b9141adddbc757f8fda1, type: 3}
@@ -571,8 +573,16 @@ MonoBehaviour:
   leftcannonBall: {fileID: 5654165260336347447, guid: 13956f476ffbed647a5a43f849b9bac9, type: 3}
   leftcannonBallPoint: {fileID: 5860866153751013466}
   cannonFire: 0
+  CannonLoad: {fileID: 0}
+  recoil: 5
   canIgnite: 0
-  TNTCooldown: 1
+  canspawnTNT: 0
+  TNT: {fileID: 0}
+  TNTCooldown: 2.8
+  TNTPlaceTime: 1.9
+  TNTLoad: {fileID: 0}
+  blastForce: 11
+  TNTFailed: 0
   jumpCooldown: 1
 --- !u!61 &9212772886230083053
 BoxCollider2D:
