@@ -32,15 +32,19 @@ public class ScoreManager : MonoBehaviour
     public GameObject countdownPanel;
     public bool gameStarted = false;
 
-    [Header ("Wintext Settings")]
+    [Header("Wintext Settings")]
     public Text winScoreText;
     public GameObject winScorePanel;
 
-
     [Header("Level Timer")]
     public Text levelTimerText;
-    public float levelTimeLimit = 60f; // Editable in Inspector
+    public float levelTimeLimit = 60f;
     private float levelTimer;
+
+    [Header("Combo Sounds")]
+    public AudioClip[] comboSounds; // Assign one sound per combo level
+    private AudioSource audioSource;
+    private int lastComboLevel = 0;
 
     void Awake()
     {
@@ -57,6 +61,12 @@ public class ScoreManager : MonoBehaviour
 
         if (winScorePanel != null)
             winScorePanel.SetActive(true);
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
 
         StartCoroutine(StartCountdown());
     }
@@ -89,18 +99,16 @@ public class ScoreManager : MonoBehaviour
         if (levelTimer > 0)
         {
             levelTimer -= Time.deltaTime;
-            if (levelTimer < 0) levelTimer = 0; // Ensure it does not go negative
+            if (levelTimer < 0) levelTimer = 0;
             UpdateLevelTimerText();
         }
 
-        // Check if time ran out and trigger scene switch
         if (levelTimer == 0 && gameStarted)
         {
-            gameStarted = false; // Prevent multiple calls
+            gameStarted = false;
             GoToLoseScene();
         }
     }
-
 
     private void UpdateLevelTimerText()
     {
@@ -146,6 +154,17 @@ public class ScoreManager : MonoBehaviour
             comboMultiplier = 1f + (currentComboLevel * 0.5f);
             if (comboMultiplier > 4f) comboMultiplier = 4f;
             UpdateComboMultiplierText();
+
+            // Play sound once for new combo level
+            if (currentComboLevel > lastComboLevel && currentComboLevel <= comboSounds.Length)
+            {
+                AudioClip clip = comboSounds[currentComboLevel - 1];
+                if (clip != null)
+                {
+                    audioSource.PlayOneShot(clip);
+                }
+                lastComboLevel = currentComboLevel;
+            }
         }
     }
 
@@ -166,6 +185,7 @@ public class ScoreManager : MonoBehaviour
         currentComboLevel = 0;
         comboMultiplier = 1f;
         comboResetTimer = 0f;
+        lastComboLevel = 0;
 
         comboMessageText.gameObject.SetActive(false);
         UpdateComboMultiplierText();
@@ -174,7 +194,7 @@ public class ScoreManager : MonoBehaviour
     private void ShowLevelCompletePopup()
     {
         levelCompleted = true;
-        Time.timeScale = 0f; // Pause the entire game
+        Time.timeScale = 0f;
 
         if (levelCompletePanel != null)
         {
@@ -187,7 +207,7 @@ public class ScoreManager : MonoBehaviour
 
     private void LoadNextScene()
     {
-        Time.timeScale = 1f; // Resume game time before switching scenes
+        Time.timeScale = 1f;
 
         if (!string.IsNullOrEmpty(nextSceneName))
         {
@@ -198,7 +218,6 @@ public class ScoreManager : MonoBehaviour
             Debug.LogError("Next scene name is not set in the Inspector!");
         }
     }
-
 
     private void GoToLoseScene()
     {
@@ -216,21 +235,14 @@ public class ScoreManager : MonoBehaviour
 
         if (countdownText != null)
         {
-            countdownText.text = "5";
-            yield return new WaitForSeconds(1f);
-            countdownText.text = "4";
-            yield return new WaitForSeconds(1f);
-            countdownText.text = "3";
-            yield return new WaitForSeconds(1f);
-            countdownText.text = "2";
-            yield return new WaitForSeconds(1f);
-            countdownText.text = "1";
-            yield return new WaitForSeconds(1f);
-            countdownText.text = "GO!";
-            yield return new WaitForSeconds(1f);
+            countdownText.text = "5"; yield return new WaitForSeconds(1f);
+            countdownText.text = "4"; yield return new WaitForSeconds(1f);
+            countdownText.text = "3"; yield return new WaitForSeconds(1f);
+            countdownText.text = "2"; yield return new WaitForSeconds(1f);
+            countdownText.text = "1"; yield return new WaitForSeconds(1f);
+            countdownText.text = "GO!"; yield return new WaitForSeconds(1f);
         }
 
-        // Hide both countdown and win score panels
         if (countdownPanel != null)
             countdownPanel.SetActive(false);
 
@@ -240,5 +252,4 @@ public class ScoreManager : MonoBehaviour
         levelTimer = levelTimeLimit;
         gameStarted = true;
     }
-
 }

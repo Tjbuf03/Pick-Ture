@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;  // Required for using Coroutines
+using System.Collections;
 
 public class StarryNightController : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float horizontalSpeed = 2f;  // This will now be synced with the camera speed
+    public float horizontalSpeed = 2f;
 
     public int maxHealth = 3;
     private int currentHealth;
@@ -15,12 +15,15 @@ public class StarryNightController : MonoBehaviour
 
     private float minX, maxX, minY, maxY;
 
-    private bool isInvincible = false;  // Track if the player is invincible
-    public float invincibilityDuration = 2f;  // Duration of invincibility in seconds
-    public float flashInterval = 0.1f;  // Time interval between player flashes (visual feedback)
+    private bool isInvincible = false;
+    public float invincibilityDuration = 2f;
+    public float flashInterval = 0.1f;
 
-    private SpriteRenderer spriteRenderer;  // To control player sprite visibility for flashing effect
-    private CameraFollow cameraFollow;  // Reference to the CameraFollow script
+    private SpriteRenderer spriteRenderer;
+    private CameraFollow cameraFollow;
+
+    public AudioClip hitSound;              // Hit sound clip
+    private AudioSource audioSource;        // AudioSource for playing sound
 
     void Start()
     {
@@ -28,22 +31,19 @@ public class StarryNightController : MonoBehaviour
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
 
-        spriteRenderer = GetComponent<SpriteRenderer>();  // Get the player's sprite renderer
-
-        // Get reference to the CameraFollow script
+        spriteRenderer = GetComponent<SpriteRenderer>();
         cameraFollow = Camera.main.GetComponent<CameraFollow>();
+
+        audioSource = GetComponent<AudioSource>(); // Get AudioSource component
     }
 
     void Update()
     {
         CalculateCameraBounds();
-
-        // Update the player's horizontal speed to match the camera's scroll speed
         horizontalSpeed = cameraFollow.GetScrollSpeed();
 
         Vector3 movement = Vector3.zero;
 
-        // Vertical movement (W/S or Up/Down Arrow keys)
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             movement += Vector3.up;
@@ -53,7 +53,6 @@ public class StarryNightController : MonoBehaviour
             movement += Vector3.down;
         }
 
-        // Horizontal movement (A/D or Left/Right Arrow keys)
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             movement += Vector3.left;
@@ -63,16 +62,13 @@ public class StarryNightController : MonoBehaviour
             movement += Vector3.right;
         }
 
-        // Apply movement to player, multiplying horizontal movement by the synced speed
         transform.Translate(movement * moveSpeed * Time.deltaTime);
         transform.Translate(Vector3.right * horizontalSpeed * Time.deltaTime);
 
-        // Clamp player within camera bounds
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
-
 
     void CalculateCameraBounds()
     {
@@ -94,9 +90,7 @@ public class StarryNightController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("WinSquare"))
         {
-            SceneManager.LoadScene("WinStarryNight");  // Load the win scene
-
-            //Glide upgrade unlocks for Starry night finish
+            SceneManager.LoadScene("WinStarryNight");
             MainManager.Instance.GlideUnlocked = true;
         }
     }
@@ -106,13 +100,19 @@ public class StarryNightController : MonoBehaviour
         currentHealth--;
         healthBar.value = currentHealth;
 
+        // Play hit sound if assigned
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
+
         if (currentHealth <= 0)
         {
             GameOver();
         }
         else
         {
-            StartCoroutine(ActivateInvincibility());  // Start the invincibility period
+            StartCoroutine(ActivateInvincibility());
         }
     }
 
@@ -121,19 +121,17 @@ public class StarryNightController : MonoBehaviour
         SceneManager.LoadScene("FailStarryNight");
     }
 
-    // Coroutine to handle invincibility frames
     IEnumerator ActivateInvincibility()
     {
         isInvincible = true;
 
-        // Visual feedback: Flash the player sprite on and off
         for (float i = 0; i < invincibilityDuration; i += flashInterval)
         {
-            spriteRenderer.enabled = !spriteRenderer.enabled;  // Toggle sprite visibility
+            spriteRenderer.enabled = !spriteRenderer.enabled;
             yield return new WaitForSeconds(flashInterval);
         }
 
-        spriteRenderer.enabled = true;  // Ensure the sprite is visible at the end
-        isInvincible = false;  // End the invincibility period
+        spriteRenderer.enabled = true;
+        isInvincible = false;
     }
 }

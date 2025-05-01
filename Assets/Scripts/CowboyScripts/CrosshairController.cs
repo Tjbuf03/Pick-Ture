@@ -4,6 +4,18 @@ public class CrosshairController : MonoBehaviour
 {
     public float speed = 5f;
     public GameObject shotEffectPrefab; // Assign your prefab here in the Inspector
+    public AudioClip shootSound; // Assign the shoot sound in Inspector
+
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
     void Update()
     {
@@ -14,7 +26,8 @@ public class CrosshairController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            TryShowShotEffect(); // By default, try to show effect
+            TryShowShotEffect(); // Show visual
+            PlayShootSound();    // Play sound
         }
     }
 
@@ -29,7 +42,14 @@ public class CrosshairController : MonoBehaviour
 
     public void SuppressShotEffect()
     {
-        // Nothing needed here anymore since the prefab is spawned once
-        // But you can still keep this method if bombs want to override default behavior
+        // Optional override method
+    }
+
+    private void PlayShootSound()
+    {
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
     }
 }

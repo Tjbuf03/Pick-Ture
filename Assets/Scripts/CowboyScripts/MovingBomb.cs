@@ -3,13 +3,14 @@ using UnityEngine;
 public class MovingBomb : TargetBase
 {
     [Header("Movement Settings")]
-    public float speed = 5f; // Adjust speed in Inspector
-    public bool moveRight = true; // Set direction in Inspector
-    public float rotationSpeed = 200f; // Adjust rotation speed in Inspector
+    public float speed = 5f;
+    public bool moveRight = true;
+    public float rotationSpeed = 200f;
     public GameObject explosionPrefab; // Assign in Inspector
+    public AudioClip destroySound;     // Assign sound clip in Inspector
 
     private Vector3 movementDirection;
-    private int penalty = 100; // Same penalty as normal bomb
+    private int penalty = 100;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class MovingBomb : TargetBase
                 SubtractPoints();
                 ResetCombo();
                 Explode();
+                PlaySound2D();
                 DestroySelf();
             }
         }
@@ -57,7 +59,25 @@ public class MovingBomb : TargetBase
 
         if (CameraShake.Instance != null)
         {
-            CameraShake.Instance.Shake(0.15f, 0.1f); // You can tweak the duration and magnitude
+            CameraShake.Instance.Shake(0.15f, 0.1f);
+        }
+    }
+
+    void PlaySound2D()
+    {
+        if (destroySound != null)
+        {
+            GameObject audioObj = new GameObject("Temp2DSound_MovingBomb");
+            AudioSource audioSource = audioObj.AddComponent<AudioSource>();
+            audioSource.clip = destroySound;
+            audioSource.volume = 1.0f;
+            audioSource.spatialBlend = 0f; // 2D sound
+            audioSource.Play();
+            Destroy(audioObj, destroySound.length);
+        }
+        else
+        {
+            Debug.LogWarning("Destroy sound not assigned on MovingBomb script.");
         }
     }
 }

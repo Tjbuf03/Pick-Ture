@@ -4,6 +4,8 @@ public class TNT : MonoBehaviour
 {
     public float offScreenY = -6f; // Adjust based on your game's bottom boundary
     public GameObject explosionPrefab; // Assign explosion prefab in the Inspector
+    public AudioClip destroySound;     // Assign sound in Inspector
+
     private int penalty = 100;
     private bool hasExploded = false;
 
@@ -50,9 +52,28 @@ public class TNT : MonoBehaviour
 
         if (CameraShake.Instance != null)
         {
-            CameraShake.Instance.Shake(0.15f, 0.1f); // You can adjust duration and magnitude
+            CameraShake.Instance.Shake(0.15f, 0.1f);
         }
 
+        PlaySound2D();
         Destroy(gameObject);
+    }
+
+    private void PlaySound2D()
+    {
+        if (destroySound != null)
+        {
+            GameObject audioObj = new GameObject("Temp2DSound_TNT");
+            AudioSource audioSource = audioObj.AddComponent<AudioSource>();
+            audioSource.clip = destroySound;
+            audioSource.volume = 1.0f;
+            audioSource.spatialBlend = 0f; // 2D sound
+            audioSource.Play();
+            Destroy(audioObj, destroySound.length);
+        }
+        else
+        {
+            Debug.LogWarning("Destroy sound not assigned on TNT script.");
+        }
     }
 }
