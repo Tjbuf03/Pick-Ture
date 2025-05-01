@@ -687,6 +687,14 @@ PrefabInstance:
       propertyPath: CannonLoad
       value: 
       objectReference: {fileID: 483579532}
+    - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: groundCheckWidth
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: groundCheckDistance
+      value: 1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
