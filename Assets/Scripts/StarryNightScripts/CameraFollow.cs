@@ -1,43 +1,43 @@
 using UnityEngine;
-using UnityEngine.UI;  // Required for UI elements
+using UnityEngine.UI;
 using System.Collections;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float scrollSpeed = 2f;  // Initial speed at which the camera moves sideways
-    public float speedIncreaseInterval = 10f;  // Time interval to increase camera speed
-    public float speedIncreaseAmount = 0.5f;  // Amount to increase the camera speed by each interval
-    private float timeSinceLastIncrease;  // Tracks time since the last speed increase
+    public float scrollSpeed = 2f;
+    public float speedIncreaseInterval = 10f;
+    public float speedIncreaseAmount = 0.5f;
+    private float timeSinceLastIncrease;
 
-    public Text speedIncreasePopup;  // Reference to the UI Text for the popup
-    public float popupDuration = 2f;  // Duration to show the popup
+    public Text speedIncreasePopup;
+    public float popupDuration = 2f;
 
+    public AudioClip speedUpSound;           // New: Sound for speed increase
+    private AudioSource audioSource;         // New: AudioSource for playing the sound
 
     void Start()
     {
-        timeSinceLastIncrease = 0f;  // Initialize the timer for speed increase
-        speedIncreasePopup.gameObject.SetActive(false);  // Hide popup at start
+        timeSinceLastIncrease = 0f;
+        speedIncreasePopup.gameObject.SetActive(false);
+
+        audioSource = GetComponent<AudioSource>();  // Get the AudioSource component
     }
 
     void Update()
     {
-        // Update the timer for camera speed increase
         timeSinceLastIncrease += Time.deltaTime;
 
-        // Check if enough time has passed to increase camera speed
         if (timeSinceLastIncrease >= speedIncreaseInterval)
         {
-            scrollSpeed += speedIncreaseAmount;  // Increase the camera speed
-            timeSinceLastIncrease = 0f;  // Reset the timer
+            scrollSpeed += speedIncreaseAmount;
+            timeSinceLastIncrease = 0f;
 
             StartCoroutine(ShowSpeedIncreasePopup());
         }
 
-        // Move the camera to the right at the current scroll speed
         transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
     }
 
-    // Method to get the current camera scroll speed
     public float GetScrollSpeed()
     {
         return scrollSpeed;
@@ -45,15 +45,16 @@ public class CameraFollow : MonoBehaviour
 
     IEnumerator ShowSpeedIncreasePopup()
     {
-        // Enable the popup text and display a message
         speedIncreasePopup.text = "Speed Up!";
         speedIncreasePopup.gameObject.SetActive(true);
 
-        // Wait for the popup duration
-        yield return new WaitForSeconds(popupDuration);
+        // Play sound if assigned
+        if (speedUpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(speedUpSound);
+        }
 
-        // Hide the popup after the duration
+        yield return new WaitForSeconds(popupDuration);
         speedIncreasePopup.gameObject.SetActive(false);
     }
 }
-

@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 4390220164150457747, guid: 646a3f7b2521108499229c069c98fbad, type: 3}
+  destroySound: {fileID: 8300000, guid: 40abbcc4cbc64c94689ae09ac839f459, type: 3}
 --- !u!114 &4068854141620245474
 MonoBehaviour:
   m_ObjectHideFlags: 0

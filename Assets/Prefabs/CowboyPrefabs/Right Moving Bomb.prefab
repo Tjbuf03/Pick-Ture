@@ -129,3 +129,4 @@ MonoBehaviour:
   moveRight: 1
   rotationSpeed: 150
   explosionPrefab: {fileID: 1878408495839193786, guid: 00bf500a3d646c84db2c69da383dbb1a, type: 3}
+  destroySound: {fileID: 8300000, guid: 40abbcc4cbc64c94689ae09ac839f459, type: 3}

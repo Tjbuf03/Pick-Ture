@@ -7,6 +7,8 @@ public class Target : TargetBase
     private float lifetime = 3f;
     private float timeAlive = 0f;
 
+    public AudioClip destroySound; // Assign in Inspector
+
     void Update()
     {
         timeAlive += Time.deltaTime;
@@ -20,9 +22,27 @@ public class Target : TargetBase
                 ScoreManager.Instance.AddScore(currentScore);
                 ScoreManager.Instance.UpdateCombo();
                 crosshair.GetComponent<CrosshairController>()?.TryShowShotEffect();
+                PlaySound2D();
                 DestroySelf();
             }
         }
     }
 
+    void PlaySound2D()
+    {
+        if (destroySound != null)
+        {
+            GameObject audioObj = new GameObject("Temp2DSound");
+            AudioSource audioSource = audioObj.AddComponent<AudioSource>();
+            audioSource.clip = destroySound;
+            audioSource.volume = 1.0f;
+            audioSource.spatialBlend = 0f; // 2D sound
+            audioSource.Play();
+            Destroy(audioObj, destroySound.length);
+        }
+        else
+        {
+            Debug.LogWarning("Destroy sound not assigned on Target script.");
+        }
+    }
 }
