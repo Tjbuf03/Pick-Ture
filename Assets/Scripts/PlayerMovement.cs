@@ -50,7 +50,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float blastForce;
     [SerializeField] private bool TNTFailed;
 
-    [Header("Jump Cooldown")]
+    [Header("PieceCollecting")]
+    [SerializeField] private bool isGetting;
+    [SerializeField] private float pieceGetCooldown;
+
+
+   [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
     private float jumpCooldownTimer;
 
@@ -64,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
         canShoot = false;
         cannonFire = false;
         canspawnTNT = false;
+        canIgnite = false;
+        isGetting = false;
         MainManager.Instance.isRestarting = false;
         //Cannon UI shows it can be fired by default
         CannonLoad.fillAmount = 0f;
@@ -146,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Cannon mechanic unlocks when bool in MainManager is set to true, and when player is on the ground, and when player is not using TNT
-        if(Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround && canShoot == false && canIgnite == false)
+        if (Input.GetKeyDown(KeyCode.C) && MainManager.Instance.CannonUnlocked && onGround && canShoot == false && canIgnite == false && isGetting == false)
         {
             canShoot = true;
             playerAnimator.SetBool("IsShooting", true);
@@ -212,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //TNT mechanic unlocks when bool in Main Manager is set to true, and player is on ground, and player is not using Cannon
-        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround && canIgnite == false && canShoot == false)
+        if (Input.GetKeyDown(KeyCode.X) && MainManager.Instance.TNTUnlocked && onGround && canIgnite == false && canShoot == false && isGetting == false)
         {
             canIgnite = true;
             playerAnimator.SetBool("IsIgniting", true);
@@ -300,6 +307,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //Player performs collecting piece animation in place
+        if (isGetting)
+        {
+            canMove = false;
+            //Cooldown begins, set the length in inspector
+            pieceGetCooldown -= Time.deltaTime;
+            playerAnimator.SetBool("IsGetting", true);
+
+            if(pieceGetCooldown <= 0f)
+            {
+                pieceGetCooldown = 1.8f;
+                playerAnimator.SetBool("IsGetting", false);
+                canMove = true;
+                isGetting = false;
+            }
+        }
+
     }
 
 
@@ -329,6 +353,15 @@ public class PlayerMovement : MonoBehaviour
         {
             onGround = false;
             playerAnimator.SetBool("IsJumping", true);
+        }
+    }
+
+    //if player collides with a painting piece, trigger the getting the piece state
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("PaintingPiece"))
+        {
+            isGetting = true;
         }
     }
 

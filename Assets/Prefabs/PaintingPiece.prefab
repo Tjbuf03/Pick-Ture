@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 7082657788767496794}
   - component: {fileID: 859627218250037473}
   - component: {fileID: 351966970859318075}
+  - component: {fileID: 224228724038584592}
   - component: {fileID: 8909051337726349235}
   m_Layer: 0
   m_Name: PaintingPiece
-  m_TagString: Untagged
+  m_TagString: PaintingPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +143,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fedb73aa6f9ca7841abc8f2347aa671a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &224228724038584592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228646553085550543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9127f3dcd34347c4ebc258f4f791f907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &8909051337726349235
