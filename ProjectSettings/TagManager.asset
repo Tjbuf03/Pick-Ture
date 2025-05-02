@@ -13,6 +13,7 @@ TagManager:
   - TeleportZone
   - Crosshair
   - AirDuct
+  - PaintingPiece
   layers:
   - Default
   - TransparentFX
