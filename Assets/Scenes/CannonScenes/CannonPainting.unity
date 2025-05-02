@@ -733,8 +733,16 @@ PrefabInstance:
       value: Player(Painting)
       objectReference: {fileID: 0}
     - target: {fileID: 3480484182567608060, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3057499
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480484182567608060, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: m_Size.y
       value: 0.9893746
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480484182567608060, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0415411
       objectReference: {fileID: 0}
     - target: {fileID: 3480484182567608060, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: m_Offset.y

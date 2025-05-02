@@ -2140,7 +2140,7 @@ MonoBehaviour:
   winScoreText: {fileID: 648063532}
   winScorePanel: {fileID: 913020665}
   levelTimerText: {fileID: 139334591}
-  levelTimeLimit: 135
+  levelTimeLimit: 105
   comboSounds:
   - {fileID: 8300000, guid: 5f037b270b2651e468b767a2632a1f31, type: 3}
   - {fileID: 8300000, guid: 6ac667f461240704b9804751dce44040, type: 3}
