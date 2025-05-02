@@ -20,7 +20,7 @@ public class WinScript : MonoBehaviour
     void Update()
     {
         //Checks if total number of pieces are collected, update piece number until we decide on a final one
-        if(MainManager.Instance.PieceNumber == 30)
+        if(MainManager.Instance.PieceNumber == 24)
         {   
             SceneManager.LoadScene(SceneName);
 
