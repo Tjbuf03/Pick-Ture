@@ -5234,7 +5234,7 @@ RectTransform:
   m_GameObject: {fileID: 1116123030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6035133, y: 0.2779936, z: 0.39015}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1803962483}
@@ -5242,7 +5242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1476.9, y: 17}
+  m_AnchoredPosition: {x: -1629, y: -157}
   m_SizeDelta: {x: 466.7769, y: 309.8179}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1116123032
@@ -5265,7 +5265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: -8328923581568760697, guid: e72a2b7a317720f4b872212e82567693, type: 3}
+  m_Texture: {fileID: 2800000, guid: 977ac0fb8dc81e14dbc285148a2a673c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9078,14 +9078,14 @@ RectTransform:
   m_GameObject: {fileID: 1803962482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6569642, y: 3.5972052, z: 2.5631168}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1116123031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59, y: -75}
+  m_AnchoredPosition: {x: 0.93530273, y: -46.207}
   m_SizeDelta: {x: 255.26, y: 76.324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1803962484
@@ -10028,6 +10028,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2884100273800178929, guid: de1dffcede266e94fa657a81f0d3242a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 977ac0fb8dc81e14dbc285148a2a673c, type: 3}
     - target: {fileID: 2898045938927905864, guid: de1dffcede266e94fa657a81f0d3242a, type: 3}
       propertyPath: m_IsActive
       value: 0
