@@ -696,6 +696,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483579528}
     - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: TNT
+      value: 
+      objectReference: {fileID: 4553109427885388636, guid: 68618c1d17372a341b3086a513e02962, type: 3}
+    - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: TNTLoad
       value: 
       objectReference: {fileID: 483579531}

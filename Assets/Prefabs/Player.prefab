@@ -583,7 +583,14 @@ MonoBehaviour:
   TNTLoad: {fileID: 0}
   blastForce: 11
   TNTFailed: 0
+  isGetting: 0
+  pieceGetCooldown: 3.2
   jumpCooldown: 1
+  jumpNoise: {fileID: 8300000, guid: acf837987b8c35740b2c73c1e703515d, type: 3}
+  pieceGetNoise: {fileID: 8300000, guid: a28951252590635479bf8c9b744e5744, type: 3}
+  cannonNoise: {fileID: 8300000, guid: ef05b1a90c81fe04a95dcfb0d3cae541, type: 3}
+  sizzleNoise: {fileID: 8300000, guid: dfe3564d4499fe146ad24ae7d551b49d, type: 3}
+  explodeNoise: {fileID: 8300000, guid: 40abbcc4cbc64c94689ae09ac839f459, type: 3}
 --- !u!61 &9212772886230083053
 BoxCollider2D:
   m_ObjectHideFlags: 0

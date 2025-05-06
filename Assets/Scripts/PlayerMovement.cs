@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("TNT")]
     [SerializeField] private bool canIgnite;
     [SerializeField] private bool canspawnTNT;
+    [SerializeField] private float explodeTimer;
     [SerializeField] private GameObject TNT;
     [SerializeField] private float TNTCooldown;
     [SerializeField] private float TNTPlaceTime;
@@ -54,10 +55,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isGetting;
     [SerializeField] private float pieceGetCooldown;
 
-
-   [Header("Jump Cooldown")]
+    [Header("Jump Cooldown")]
     [SerializeField] private float jumpCooldown = 0.2f;
     private float jumpCooldownTimer;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip jumpNoise;
+    [SerializeField] private AudioClip pieceGetNoise;
+    [SerializeField] private AudioClip cannonNoise;
+    [SerializeField] private AudioClip sizzleNoise;
+    [SerializeField] private AudioClip explodeNoise;
 
     void Start()
     {
@@ -121,6 +128,8 @@ public class PlayerMovement : MonoBehaviour
                 jumpCooldownTimer = jumpCooldown;
 
                 playerAnimator.SetBool("IsJumping", true);
+
+                AudioManager.PlaySound(jumpNoise);
             }
         }
         
@@ -190,6 +199,8 @@ public class PlayerMovement : MonoBehaviour
                     rb.AddForce(new Vector2(recoil, 0f), ForceMode2D.Impulse);
                 }
 
+                AudioManager.PlaySound(cannonNoise);
+
                 //Disables more than one cannonball from spawning
                 cannonFire = false;
             }
@@ -226,6 +237,7 @@ public class PlayerMovement : MonoBehaviour
             canspawnTNT = true;
             //TNT Load bar fills
             TNTLoad.fillAmount = 1f;
+            explodeTimer = 2.2f;//0.6s shorter than TNTCooldown
         }
 
         //If Player is igniting TNT
@@ -235,6 +247,7 @@ public class PlayerMovement : MonoBehaviour
             canMove = false;
             //Cooldown begins, set the length in inspector
             TNTCooldown -= Time.deltaTime;
+            explodeTimer -= Time.deltaTime;
             //TNT Load bar goes down
             TNTLoad.fillAmount -= 0.38f * Time.deltaTime;
             //Zeroes forces on player so that jump is consistent
@@ -258,6 +271,8 @@ public class PlayerMovement : MonoBehaviour
 
                 }
 
+                AudioManager.PlaySound(sizzleNoise);
+
                 //Turns off TNT instantiation
                 canspawnTNT = false;
 
@@ -277,6 +292,13 @@ public class PlayerMovement : MonoBehaviour
                 //Transitions to player exploding animation
                 playerAnimator.SetBool("IsIgniting", false);
                 playerAnimator.SetBool("IsExploding", true);
+            }
+
+            //Plays sound when tnt explodes
+            if(explodeTimer <= 0f)
+            {
+                AudioManager.PlaySound(explodeNoise);
+                explodeTimer = 2.2f;
             }
 
             //TNT Blasts player upward at correct point in animation
@@ -317,7 +339,7 @@ public class PlayerMovement : MonoBehaviour
 
             if(pieceGetCooldown <= 0f)
             {
-                pieceGetCooldown = 1.8f;
+                pieceGetCooldown = 3.2f;
                 playerAnimator.SetBool("IsGetting", false);
                 canMove = true;
                 isGetting = false;
@@ -361,6 +383,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PaintingPiece"))
         {
+            AudioManager.PlaySound(pieceGetNoise);
             isGetting = true;
         }
     }
