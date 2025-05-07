@@ -1528,12 +1528,20 @@ PrefabInstance:
       value: -0.05829525
       objectReference: {fileID: 0}
     - target: {fileID: 4699996817210868386, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699996817210868386, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699996817210868386, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.77
+      value: -12.33
       objectReference: {fileID: 0}
     - target: {fileID: 4699996817210868386, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.9632
+      value: -10.78
       objectReference: {fileID: 0}
     - target: {fileID: 4699996817210868386, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1597,7 +1605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9111351951584021549, guid: 0762521b222844e43a16cf483b4747f5, type: 3}
       propertyPath: groundCheckDistance
-      value: 1.1
+      value: 1.12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
