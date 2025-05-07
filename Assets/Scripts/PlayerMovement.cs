@@ -130,6 +130,10 @@ public class PlayerMovement : MonoBehaviour
                 playerAnimator.SetBool("IsJumping", true);
 
                 AudioManager.PlaySound(jumpNoise);
+                //Cannon Load bar fills
+                CannonLoad.fillAmount = 1f;
+                //TNT Load bar fills
+                TNTLoad.fillAmount = 1f;
             }
         }
         
@@ -364,6 +368,11 @@ public class PlayerMovement : MonoBehaviour
                 //Glide loading bar fills
                 GlideLoad.fillAmount = 1f;
                 rb.gravityScale = 1f;
+
+                //Cannon Load bar fills
+                CannonLoad.fillAmount = 0f;
+                //TNT Load bar fills
+                TNTLoad.fillAmount = 0f;
             }
         }
     }
@@ -375,6 +384,10 @@ public class PlayerMovement : MonoBehaviour
         {
             onGround = false;
             playerAnimator.SetBool("IsJumping", true);
+            //Cannon Load bar fills
+            CannonLoad.fillAmount = 1f;
+            //TNT Load bar fills
+            TNTLoad.fillAmount = 1f;
         }
     }
 
